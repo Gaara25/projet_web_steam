@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'user_index'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'user_index'|trans }}</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>{{ 'username'|trans }}</th>
+                <th>{{ 'email'|trans }}</th>
+                <th>{{ 'avatar'|trans }}</th>
+                <th>{{ 'created_at'|trans }}</th>
+                <th>{{ 'actions'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    {% if user.avatar %}
+                        <img src="{{ asset('uploads/avatars/' ~ user.avatar) }}" alt="{{ user.username }}" style="max-width: 50px; max-height: 50px;">
+                    {% else %}
+                        {{ 'no_avatar'|trans }}
+                    {% endif %}
+                </td>
+                <td>{{ user.createdAt ? user.createdAt|format_date('full') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_user_show', {'id': user.id}) }}">{{ 'show'|trans }}</a>
+                    <span>|</span>
+                    <a href="{{ path('app_user_edit', {'id': user.id}) }}">{{ 'edit'|trans }}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">{{ 'no_records_found'|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_user_new') }}">{{ 'create_new'|trans }}</a>
+{% endblock %}

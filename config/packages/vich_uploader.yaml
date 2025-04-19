@@ -1,0 +1,13 @@
+vich_uploader:
+    db_driver: orm
+    mappings:
+        user_avatar:
+            uri_prefix: /uploads/avatars
+            upload_destination: '%kernel.project_dir%/public/uploads/avatars'
+            namer:
+                service: Vich\UploaderBundle\Naming\PropertyNamer
+                options:
+                    property: "username"
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true

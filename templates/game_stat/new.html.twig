@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'new_game_stat'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'create_new_game_stat'|trans }}</h1>
+
+    {{ include('game_stat/_form.html.twig') }}
+
+    <a href="{{ path('app_game_stat_index') }}">{{ 'back_to_list'|trans }}</a>
+{% endblock %}

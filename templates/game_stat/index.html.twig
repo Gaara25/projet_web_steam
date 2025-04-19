@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'game_stat_index'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'game_stat_index'|trans }}</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>{{ 'hours_played'|trans }}</th>
+                <th>{{ 'last_played'|trans }}</th>
+                <th>{{ 'actions'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for game_stat in game_stats %}
+            <tr>
+                <td>{{ game_stat.id }}</td>
+                <td>{{ game_stat.hoursPlayed }}</td>
+                <td>{{ game_stat.lastPlayed ? game_stat.lastPlayed|format_datetime('full') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_game_stat_show', {'id': game_stat.id}) }}">{{ 'show'|trans }}</a>
+                    <span>|</span>
+                    <a href="{{ path('app_game_stat_edit', {'id': game_stat.id}) }}">{{ 'edit'|trans }}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">{{ 'no_records_found'|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_game_stat_new') }}">{{ 'create_new'|trans }}</a>
+{% endblock %}

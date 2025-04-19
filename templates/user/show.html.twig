@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'user'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'user'|trans }}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'username'|trans }}</th>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'email'|trans }}</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'avatar'|trans }}</th>
+                <td>
+                    {% if user.avatar %}
+                        <img src="{{ asset('uploads/avatars/' ~ user.avatar) }}" alt="{{ user.username }}" style="max-width: 50px; max-height: 50px;">
+                    {% else %}
+                        {{ 'no_avatar'|trans }}
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>{{ 'created_at'|trans }}</th>
+                <td>{{ user.createdAt ? user.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_user_index') }}">{{ 'back_to_list'|trans }}</a>
+    <span>|</span>
+    <a href="{{ path('app_user_edit', {'id': user.id}) }}">{{ 'edit'|trans }}</a>
+
+    {{ include('user/_delete_form.html.twig') }}
+{% endblock %}

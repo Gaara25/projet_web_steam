@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'game_stat'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'game_stat'|trans }}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ game_stat.id }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'hours_played'|trans }}</th>
+                <td>{{ game_stat.hoursPlayed }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'last_played'|trans }}</th>
+                <td>{{ game_stat.lastPlayed ? game_stat.lastPlayed|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_game_stat_index') }}">{{ 'back_to_list'|trans }}</a>
+    <span>|</span>
+    <a href="{{ path('app_game_stat_edit', {'id': game_stat.id}) }}">{{ 'edit'|trans }}</a>
+
+    {{ include('game_stat/_delete_form.html.twig') }}
+{% endblock %}

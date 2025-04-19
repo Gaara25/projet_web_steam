@@ -1,0 +1,10 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+admin_crud:
+    resource: '../src/Controller/Admin'
+    type: attribute
+    prefix: /admin

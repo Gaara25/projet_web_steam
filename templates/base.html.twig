@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ 'project_title'|trans }}{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    {% block stylesheets %}
+        <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') }}">
+        <link rel="stylesheet" href={{ asset('css/style.css') }} >
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js') }}" defer></script>
+        <script type="text/javascript" src="{{ asset('js/main.js') }}" defer></script>
+    {% endblock %}
+</head>
+<body>
+<header>
+    <h1>{{ 'steam_admin_page'|trans }}</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ path('app_default') }}" class="tooltipped" data-tooltip="{{ 'back_home_tooltip'|trans }}">{{ 'home'|trans }}</a></li>
+            {% if is_granted('ROLE_ADMIN') %}
+            <ul>
+                <li><a href="{{ path('app_user_index') }}">{{ 'crud_user'|trans }}</a></li>
+                <li><a href="{{ path('app_game_index') }}">{{ 'crud_game'|trans }}</a></li>
+                <li><a href="{{ path('app_game_stat_index') }}">{{ 'crud_gamestat'|trans }}</a></li>
+                <li><a href="{{ path('app_comment_index') }}">{{ 'crud_comment'|trans }}</a></li>
+            </ul>
+            {% endif %}
+            <ul>
+            {% if app.user %}
+                <a href="{{ path('app_logout') }}" class="btn right">{{ 'logout'|trans }}</a>
+            {% else %}
+                <a href="{{ path('app_login') }}" class="btn right">{{ 'login'|trans }}</a>
+            {% endif %}
+            </ul>
+        </ul>
+    </nav>
+</header>
+{% block body %}{% endblock %}
+<footer>
+    <p>{{ 'university_year'|trans }}</p>
+    <form method="get" action="">
+        <select name="_locale" onchange="this.form.submit()">
+            {% for locale, language in {'fr': 'FR', 'en': 'EN', 'es': 'ES', 'de': 'DE', 'it': 'IT'} %}
+                <option value="{{ locale }}" {% if app.request.getLocale() == locale %}selected{% endif %}>{{ language }}</option>
+            {% endfor %}
+        </select>
+    </form>
+</footer>
+</body>
+</html>
