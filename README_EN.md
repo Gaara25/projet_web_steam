@@ -6,7 +6,7 @@
 
 - [Documentation en français](README.md)
 
-### Reflection Base for Display
+### Reflection Base for Display :
 - https://www.youtube.com/watch?v=cDY2p1CTkPo
 - https://www.figma.com/community/file/1302616100790619521/steam-redesign
 
