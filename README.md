@@ -6,8 +6,9 @@
 
 - [Documentation in English](README_EN.md)
 
-https://www.youtube.com/watch?v=cDY2p1CTkPo
-https://www.figma.com/community/file/1302616100790619521/steam-redesign
+### Base de réflexion de l'affichage
+- https://www.youtube.com/watch?v=cDY2p1CTkPo  
+- https://www.figma.com/community/file/1302616100790619521/steam-redesign
 
 ---
 
