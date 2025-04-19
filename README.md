@@ -32,6 +32,16 @@ Créer un site web dynamique avec Symfony (PHP) et VueJS reproduisant le profil 
 composer create-project symfony/skeleton projet-steam
 ```
 
+### Configurer Git :
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/Gaara25/projet_web_steam.git
+git branch -M main
+git push -u origin main
+```
+
 ### Les dépendances utilisées tout du long :
 
 #### Dépendances de développement :

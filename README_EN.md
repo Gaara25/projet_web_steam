@@ -4,13 +4,13 @@
 
 ## Documentation
 
-https://www.youtube.com/watch?v=cDY2p1CTkPo
+https://www.youtube.com/watch?v=cDY2p1CTkPo  
 https://www.figma.com/community/file/1302616100790619521/steam-redesign
 
 ---
 
 ## 🎯 Objective
-Create a dynamic website using Symfony (PHP) and VueJS reproducing a personalized Steam user profile with:
+Create a dynamic website using Symfony (PHP) and VueJS to replicate a personalized Steam user profile with:
 - User management (username, avatar, etc.) ✅
 - Games and game statistics ✅
 - Implementation of a minimal API for VueJS ❌
@@ -26,40 +26,50 @@ Create a dynamic website using Symfony (PHP) and VueJS reproducing a personalize
 
 ## 🏗️ Setting up the Symfony Project
 
-### Project creation:
+### Project Creation:
 ```bash
 composer create-project symfony/skeleton projet-steam
 ```
 
-### Dependencies used throughout:
+### Configure Git:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/Gaara25/projet_web_steam.git
+git branch -M main
+git push -u origin main
+```
+
+### Dependencies used throughout the project:
 
 #### Development dependencies:
-  ```bash
-  composer require --dev profiler maker
-  ```
+```bash
+composer require --dev profiler maker
+```
 
 #### Production dependencies:
-  ```bash
-  composer require twig form validator orm asset
-  ```
+```bash
+composer require twig form validator orm asset
+```
 - These dependencies are required for translation and date formatting:
-  ```bash
-  composer require symfony/translation
-  composer require symfony/intl
-  composer require twig/intl-extra
-  ```
+```bash
+composer require symfony/translation
+composer require symfony/intl
+composer require twig/intl-extra
+```
 
 - This dependency is required for security:
-  ```bash
-  composer require symfony/security-bundle
-  ```
+```bash
+composer require symfony/security-bundle
+```
 
 - This dependency is used for file uploads:
-  ```bash
-  composer require vich/uploader-bundle
-  ```
+```bash
+composer require vich/uploader-bundle
+```
 
-### Useful commands:
+### Some useful commands:
   
 - Start the local server:  
   ```bash
@@ -81,7 +91,7 @@ composer create-project symfony/skeleton projet-steam
   php bin/console make:security:form-login
   ```
 
-- Command to create a listener that modifies `_locale` to change the language based on user preference:
+- Command to create a listener to modify `_locale` for changing the language based on user preference:
   ```bash
   php bin/console make:listener
   ```
@@ -90,7 +100,7 @@ composer create-project symfony/skeleton projet-steam
 
 ## 🧱 Symfony Project Structure
 
-### Database configuration
+### Database Configuration
 In the `.env.local` file (to be created):
 ```env
 DATABASE_URL="mysql://user:pwd@localhost:3306/DBSteam?serverVersion=8"
@@ -101,7 +111,7 @@ Then, create the database with the command:
 php bin/console doctrine:database:create
 ```
 
-### Created entities
+### Created Entities
 
 #### 🧍‍♂️`User`
 Command to generate the entity:  
@@ -167,7 +177,7 @@ Fields:
 
 ---
 
-### Generating and running migrations
+### Generating and Running Migrations
 - Generate migrations:  
   ```bash
   php bin/console make:migration
@@ -180,7 +190,7 @@ Fields:
 ---
 
 ### Generating CRUD
-For each entity, I generated the CRUD using the following commands:
+For each entity, I generated CRUD operations with the following commands:
 ```bash
 php bin/console make:crud User
 php bin/console make:crud Game
@@ -190,19 +200,19 @@ php bin/console make:crud Comment
 
 #### 🔄 Modifications
 
-##### Update to the `show` function in `GameController`
+##### Updated `show` function in `GameController`
 
 The `show` function was updated to display the details of a specific game based on its `id`.
 
-##### Update to the `buildForm` functions in `GameStatType` and `CommentType`
+##### Updated `buildForm` functions in `GameStatType` and `CommentType`
 
 The `buildForm` function was updated to customize form fields, allowing the display of choices or user-friendly labels based on associated entity data, such as a person's `name` or a game's `title`.
 
-##### Update to the `__construct` function in `Comment`
+##### Updated `__construct` function in `Comment`
 
 The `__construct` function was updated to automatically initialize the `createdAt` field with the current date and time.
 
-##### Update to each `templates`
+##### Updated each `templates`
 
 The `format_date` modifications were made to ensure proper date formatting.
 
