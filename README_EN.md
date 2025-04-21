@@ -90,8 +90,7 @@ composer require vich/uploader-bundle
   ```bash
   net start mySQL80
   ```
-
-- Commands for enhanced security:
+- Commands to manage security and user logins:
   ```bash
   php bin/console security:hash-password
   php bin/console make:security:form-login
