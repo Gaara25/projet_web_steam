@@ -70,6 +70,10 @@ composer require symfony/security-bundle
 ```bash
 composer require vich/uploader-bundle
 ```
+- This dependency is used to set up a minimal API allowing VueJS to communicate with the Symfony backend.
+  ```bash
+  composer require api
+  ```
 
 ### Some useful commands:
   
