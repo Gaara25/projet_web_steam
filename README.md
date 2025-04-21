@@ -91,7 +91,7 @@ git push -u origin main
   net start mySQL80
   ```
 
-- Commande pour plus de sécurité
+- Commandes pour gérer la sécurité et les connexions utilisateur :
   ```bash
   php bin/console security:hash-password
   php bin/console make:security:form-login
