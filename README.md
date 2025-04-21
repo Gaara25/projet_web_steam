@@ -70,6 +70,11 @@ git push -u origin main
   composer require vich/uploader-bundle
   ```
 
+- Cette dépendance est utilisée pour mettre en place une API minimale permettant à VueJS de communiquer avec le backend Symfony.
+  ```bash
+  composer require api
+  ```
+
 ### Quelques commandes utiles :
   
 - Lancer le serveur local :  

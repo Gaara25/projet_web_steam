@@ -17,7 +17,11 @@
 </head>
 <body>
 <header>
+    {% if app.user and 'ROLE_ADMIN' in app.user.roles %}
     <h1>{{ 'steam_admin_page'|trans }}</h1>
+    {% else %}
+    <h1>{{ 'steam_user_page'|trans }}</h1>
+    {% endif %}
     <nav>
         <ul>
             <li><a href="{{ path('app_default') }}" class="tooltipped" data-tooltip="{{ 'back_home_tooltip'|trans }}">{{ 'home'|trans }}</a></li>
