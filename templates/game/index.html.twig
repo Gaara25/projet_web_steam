@@ -22,7 +22,7 @@
                 <td>{{ game.id }}</td>
                 <td>{{ game.title }}</td>
                 <td>
-                     <img src="{{ asset('gameImage/' ~ game.image) }}" alt="{{ game.title }}" style="max-width: 50px; max-height: 50px;">
+                    <img src="{{ asset('gameImage/' ~ game.image) }}" alt="{{ game.title }}" style="max-width: 100px; max-height: 100px;">
                 </td>
                 <td>{{ game.developer }}</td>
                 <td>{{ game.releaseDate ? game.releaseDate|format_date('full') : '' }}</td>

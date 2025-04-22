@@ -1,5 +1,3 @@
-{# filepath: c:\Users\axelj\Documents\Informatique\License\L2\web\projet_web_steam\templates\steam\profile.html.twig #}
-
 {% extends 'base.html.twig' %}
 
 {% block title %}Profil Steam - {{ user.username }}{% endblock %}
@@ -8,7 +6,7 @@
 <div class="steam-profile">
     <!-- Section Profil Utilisateur -->
     <div class="user-profile">
-        <img src="{{ asset(user.avatar) }}" alt="Avatar de {{ user.username }}" class="user-avatar">
+        <img src="{{ asset('uploads/avatars/' ~ user.avatar) }}" alt="Avatar de {{ user.username }}" class="user-avatar" style="max-width: 100px; max-height: 100px;">
         <h1>{{ user.username }}</h1>
         <p>Email : {{ user.email }}</p>
     </div>
@@ -19,7 +17,7 @@
         <div class="games-list">
             {% for gameStat in user.gameStats %}
                 <div class="game-card">
-                    <img src="{{ asset(gameStat.game.image) }}" alt="Image de {{ gameStat.game.title }}" class="game-image">
+                    <img src="{{ asset('gameImage/' ~ gameStat.game.image) }}" alt="{{ gameStat.game.title }}" class="game-image" style="max-width: 200px; max-height: 200px;">
                     <h3>{{ gameStat.game.title }}</h3>
                     <p>Développeur : {{ gameStat.game.developer }}</p>
                     <p>Date de sortie : {{ gameStat.game.releaseDate|date('d/m/Y') }}</p>
