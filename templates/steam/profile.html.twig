@@ -1,0 +1,50 @@
+{# filepath: c:\Users\axelj\Documents\Informatique\License\L2\web\projet_web_steam\templates\steam\profile.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Steam - {{ user.username }}{% endblock %}
+
+{% block body %}
+<div class="steam-profile">
+    <!-- Section Profil Utilisateur -->
+    <div class="user-profile">
+        <img src="{{ asset(user.avatar) }}" alt="Avatar de {{ user.username }}" class="user-avatar">
+        <h1>{{ user.username }}</h1>
+        <p>Email : {{ user.email }}</p>
+    </div>
+
+    <!-- Section Jeux -->
+    <div class="user-games">
+        <h2>Mes Jeux</h2>
+        <div class="games-list">
+            {% for gameStat in user.gameStats %}
+                <div class="game-card">
+                    <img src="{{ asset(gameStat.game.image) }}" alt="Image de {{ gameStat.game.title }}" class="game-image">
+                    <h3>{{ gameStat.game.title }}</h3>
+                    <p>Développeur : {{ gameStat.game.developer }}</p>
+                    <p>Date de sortie : {{ gameStat.game.releaseDate|date('d/m/Y') }}</p>
+                    <p>Heures jouées : {{ gameStat.hoursPlayed }}</p>
+                    <p>Dernière partie : {{ gameStat.lastPlayed|date('d/m/Y H:i') }}</p>
+                </div>
+            {% else %}
+                <p>Aucun jeu trouvé.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Section Commentaires -->
+    <div class="user-comments">
+        <h2>Mes Commentaires</h2>
+        <div class="comments-list">
+            {% for comment in user.comments %}
+                <div class="comment-card">
+                    <p>{{ comment.content }}</p>
+                    <small>Posté le : {{ comment.createdAt|date('d/m/Y H:i') }}</small>
+                </div>
+            {% else %}
+                <p>Aucun commentaire trouvé.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+.steam-profile {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.user-games, .user-comments {
+    margin-bottom: 30px;
+}
+
+.games-list, .comments-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.game-card, .comment-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

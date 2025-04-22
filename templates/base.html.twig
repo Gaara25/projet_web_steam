@@ -7,25 +7,14 @@
     
     
         {% block stylesheets %}
-            {% if is_granted('ROLE_ADMIN') %}
                 <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet">
                 <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') }}">
                 <link rel="stylesheet" href={{ asset('css/style.css') }} >
-            {% else %}
-                <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet">
-                <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') }}">
-                <link rel="stylesheet" href={{ asset('css/style.css') }} >
-            {% endif %}
         {% endblock %}
 
         {% block javascripts %}
-            {% if is_granted('ROLE_ADMIN') %}
                 <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js') }}" defer></script>
                 <script type="text/javascript" src="{{ asset('js/main.js') }}" defer></script>
-            {% else %}
-                <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js') }}" defer></script>
-                <script type="text/javascript" src="{{ asset('js/main.js') }}" defer></script>
-            {% endif %}
         {% endblock %}
 
 </head>
@@ -39,6 +28,7 @@
     <nav>
         <ul>
             <li><a href="{{ path('app_default') }}" class="tooltipped" data-tooltip="{{ 'back_home_tooltip'|trans }}">{{ 'home'|trans }}</a></li>
+            <li><a href="{{ path('steam_profile') }}" class="tooltipped" data-tooltip="{{ 'preview_tooltip'|trans }}">{{ 'steam'|trans }}</a></li>
             {% if is_granted('ROLE_ADMIN') %}
                 <li><a href="{{ path('app_user_index') }}">{{ 'crud_user'|trans }}</a></li>
                 <li><a href="{{ path('app_game_index') }}">{{ 'crud_game'|trans }}</a></li>
