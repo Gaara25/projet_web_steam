@@ -2,16 +2,6 @@
 
 ---
 
-## Documentation
-
-- [Documentation en français](README.md)
-
-### Reflection Base for Display :
-- https://www.youtube.com/watch?v=cDY2p1CTkPo
-- https://www.figma.com/community/file/1302616100790619521/steam-redesign
-
----
-
 ## 🎯 Objective
 Create a dynamic website using Symfony (PHP) and VueJS to replicate a personalized Steam user profile with:
 - User management (username, avatar, etc.) ✅
@@ -73,6 +63,11 @@ composer require vich/uploader-bundle
 - This dependency is used to set up a minimal API allowing VueJS to communicate with the Symfony backend.
   ```bash
   composer require api
+  ```
+
+- This dependency is used to convert Markdown text into HTML.
+  ```bash
+  composer require erusev/parsedown
   ```
 
 ### Some useful commands:

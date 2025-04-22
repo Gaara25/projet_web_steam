@@ -1,46 +1,46 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Profil Steam - {{ user.username }}{% endblock %}
+{% block title %}{{ 'steam_user_page'|trans }} - {{ user.username }}{% endblock %}
 
 {% block body %}
 <div class="steam-profile">
     <!-- Section Profil Utilisateur -->
     <div class="user-profile">
-        <img src="{{ asset('uploads/avatars/' ~ user.avatar) }}" alt="Avatar de {{ user.username }}" class="user-avatar" style="max-width: 100px; max-height: 100px;">
+        <img src="{{ asset('uploads/avatars/' ~ user.avatar) }}" alt="{{ 'avatar'|trans }} {{ user.username }}" class="user-avatar" style="max-width: 100px; max-height: 100px;">
         <h1>{{ user.username }}</h1>
-        <p>Email : {{ user.email }}</p>
+        <p>{{ 'email'|trans }} : {{ user.email }}</p>
     </div>
 
     <!-- Section Jeux -->
     <div class="user-games">
-        <h2>Mes Jeux</h2>
+        <h2>{{ 'game_index'|trans }}</h2>
         <div class="games-list">
             {% for gameStat in user.gameStats %}
                 <div class="game-card">
                     <img src="{{ asset('gameImage/' ~ gameStat.game.image) }}" alt="{{ gameStat.game.title }}" class="game-image" style="max-width: 200px; max-height: 200px;">
                     <h3>{{ gameStat.game.title }}</h3>
-                    <p>Développeur : {{ gameStat.game.developer }}</p>
-                    <p>Date de sortie : {{ gameStat.game.releaseDate|date('d/m/Y') }}</p>
-                    <p>Heures jouées : {{ gameStat.hoursPlayed }}</p>
-                    <p>Dernière partie : {{ gameStat.lastPlayed|date('d/m/Y H:i') }}</p>
+                    <p>{{ 'developer'|trans }} : {{ gameStat.game.developer }}</p>
+                    <p>{{ 'release_date'|trans }} : {{ gameStat.game.releaseDate|date('d/m/Y') }}</p>
+                    <p>{{ 'hours_played'|trans }} : {{ gameStat.hoursPlayed }}</p>
+                    <p>{{ 'last_played'|trans }} : {{ gameStat.lastPlayed|date('d/m/Y H:i') }}</p>
                 </div>
             {% else %}
-                <p>Aucun jeu trouvé.</p>
+                <p>{{ 'no_records_found'|trans }}</p>
             {% endfor %}
         </div>
     </div>
 
     <!-- Section Commentaires -->
     <div class="user-comments">
-        <h2>Mes Commentaires</h2>
+        <h2>{{ 'comment_index'|trans }}</h2>
         <div class="comments-list">
             {% for comment in user.comments %}
                 <div class="comment-card">
                     <p>{{ comment.content }}</p>
-                    <small>Posté le : {{ comment.createdAt|date('d/m/Y H:i') }}</small>
+                    <small>{{ 'created_at'|trans }} : {{ comment.createdAt|date('d/m/Y H:i') }}</small>
                 </div>
             {% else %}
-                <p>Aucun commentaire trouvé.</p>
+                <p>{{ 'no_records_found'|trans }}</p>
             {% endfor %}
         </div>
     </div>
