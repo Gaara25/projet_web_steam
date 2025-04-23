@@ -44,5 +44,13 @@
             {% endfor %}
         </div>
     </div>
+
+    <h2>{{ 'add_comment'|trans }}</h2>
+    <div class="add-comment">
+        <form action="{{ path('add_comment', { 'id': user.id }) }}" method="post">
+            <textarea name="comment_content" placeholder="{{ 'write_comment'|trans }}" required></textarea>
+            <button type="submit">{{ 'submit'|trans }}</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

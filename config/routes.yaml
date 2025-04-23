@@ -8,3 +8,8 @@ admin_crud:
     resource: '../src/Controller/Admin'
     type: attribute
     prefix: /admin
+
+add_comment:
+    path: /user/{id}/add-comment
+    controller: App\Controller\CommentController::addComment
+    methods: [POST]

@@ -32,10 +32,6 @@ final class DefaultController extends AbstractController
     {
         $user = $entityManager->getRepository(User::class)->find($id);
 
-        if (!$user) {
-            throw $this->createNotFoundException('Utilisateur non trouvé.');
-        }
-
         return $this->render('steam/profile.html.twig', [
             'user' => $user,
         ]);

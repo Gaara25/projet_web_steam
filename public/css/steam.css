@@ -36,3 +36,39 @@
     height: auto;
     border-radius: 8px;
 }
+
+.add-comment {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.add-comment form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-comment textarea {
+    width: 100%;
+    height: 75px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.add-comment button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.add-comment button:hover {
+    background-color: #0056b3;
+}
