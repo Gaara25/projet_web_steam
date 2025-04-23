@@ -3,12 +3,13 @@
 ---
 
 ## 🎯 Objetivo
-Crear un sitio web dinámico utilizando Symfony (PHP) y VueJS para replicar un perfil personalizado de usuario de Steam con:
+Crear un sitio web dinámico utilizando Symfony (PHP) y VueJS para replicar un perfil de usuario personalizado de Steam con:
 - Gestión de usuarios (nombre de usuario, avatar, etc.) ✅
 - Juegos y estadísticas de juegos ✅
 - Implementación de una API mínima para VueJS ❌
 - Una estructura base limpia y relacional ✅
 
+### 🎯 Objetivo Secundario
 - Gestionar fechas mostradas en el idioma mantenido ✅
 - Subida de avatar ✅
 - Permitir a los usuarios cambiar el idioma según su preferencia ✅
@@ -28,12 +29,12 @@ composer create-project symfony/skeleton proyecto-steam
 git init
 git add .
 git commit -m "Commit inicial"
-git remote add origin https://github.com/Gaara25/proyecto_web_steam.git
+git remote add origin https://github.com/Gaara25/projet_web_steam.git
 git branch -M main
 git push -u origin main
 ```
 
-### Dependencias utilizadas en el proyecto:
+### Dependencias utilizadas a lo largo del proyecto:
 
 #### Dependencias de desarrollo:
 ```bash
@@ -41,25 +42,26 @@ composer require --dev profiler maker
 ```
 
 #### Dependencias de producción:
-```bash
-composer require twig form validator orm asset
-```
+  ```bash
+  composer require twig form validator orm asset
+  ```
 - Estas dependencias son necesarias para la traducción y el formato de fechas:
-```bash
-composer require symfony/translation
-composer require symfony/intl
-composer require twig/intl-extra
-```
+  ```bash
+  composer require symfony/translation
+  composer require symfony/intl
+  composer require twig/intl-extra
+  ```
 
 - Esta dependencia es necesaria para la seguridad:
-```bash
-composer require symfony/security-bundle
-```
+  ```bash
+  composer require symfony/security-bundle
+  ```
 
-- Esta dependencia se utiliza para la subida de archivos:
-```bash
-composer require vich/uploader-bundle
-```
+- Esta dependencia se utiliza para subir archivos:
+  ```bash
+  composer require vich/uploader-bundle
+  ```
+
 - Esta dependencia se utiliza para configurar una API mínima que permita a VueJS comunicarse con el backend de Symfony.
   ```bash
   composer require api
@@ -85,6 +87,7 @@ composer require vich/uploader-bundle
   ```bash
   net start mySQL80
   ```
+
 - Comandos para gestionar la seguridad y los inicios de sesión de usuarios:
   ```bash
   php bin/console security:hash-password
@@ -197,23 +200,5 @@ php bin/console make:crud Game
 php bin/console make:crud GameStat
 php bin/console make:crud Comment
 ```
-
-#### 🔄 Modificaciones
-
-##### Función `show` actualizada en `GameController`
-
-La función `show` fue actualizada para mostrar los detalles de un juego específico basado en su `id`.
-
-##### Funciones `buildForm` actualizadas en `GameStatType` y `CommentType`
-
-La función `buildForm` fue actualizada para personalizar los campos del formulario, permitiendo la visualización de opciones o etiquetas amigables para el usuario basadas en los datos de la entidad asociada, como el `name` de una persona o el `title` de un juego.
-
-##### Función `__construct` actualizada en `Comment`
-
-La función `__construct` fue actualizada para inicializar automáticamente el campo `createdAt` con la fecha y hora actual.
-
-##### Actualización de cada `templates`
-
-Se realizaron modificaciones de `format_date` para garantizar un formato de fecha adecuado.
 
 ---

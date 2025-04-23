@@ -15,6 +15,8 @@ Créer un site web dynamique avec Symfony (PHP) et VueJS reproduisant le profil 
 - Pouvoir changer la langue selon la préférence de l'utilisateur ✅
 - Ajouter une sécurité pour que seul l'admin puisse voir les CRUD ✅
 
+---
+
 ## 🏗️ Mise en place du projet Symfony
 
 ### Création du projet :
@@ -198,23 +200,5 @@ php bin/console make:crud Game
 php bin/console make:crud GameStat
 php bin/console make:crud Comment
 ```
-
-#### 🔄 Modifications
-
-##### Mise à jour de la fonction `show` dans `GameController`
-
-La fonction `show` a été modifiée pour afficher les détails d’un jeu spécifique en fonction de son `id`.
-
-##### Mise à jour des fonctions `buildForm` dans `GameStatType` et `CommentType`
-
-La fonction `buildForm` a été modifiée pour personnaliser les champs du formulaire, permettant d'afficher des choix ou des libellés conviviaux basés sur les données des entités associées, comme le `nom` d’une personne ou le `titre` d’un jeu.
-
-##### Mise à jour de la fonction `__construct` dans `Comment`
-
-La fonction `__construct` a été modifiée pour initialiser automatiquement le champ `createdAt` avec la date et l'heure actuelles.
-
-##### Mise à jour de chaque `templates`
-
-Les modifications de `format_date` ont eu pour but le bon format de la date.
 
 ---

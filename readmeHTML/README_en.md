@@ -9,6 +9,7 @@ Create a dynamic website using Symfony (PHP) and VueJS to replicate a personaliz
 - Implementation of a minimal API for VueJS ❌
 - A clean and relational base structure ✅
 
+### 🎯 Secondary Objective
 - Manage dates displayed in the maintained language ✅
 - Avatar upload ✅
 - Allow users to change the language based on their preference ✅
@@ -41,25 +42,26 @@ composer require --dev profiler maker
 ```
 
 #### Production dependencies:
-```bash
-composer require twig form validator orm asset
-```
+  ```bash
+  composer require twig form validator orm asset
+  ```
 - These dependencies are required for translation and date formatting:
-```bash
-composer require symfony/translation
-composer require symfony/intl
-composer require twig/intl-extra
-```
+  ```bash
+  composer require symfony/translation
+  composer require symfony/intl
+  composer require twig/intl-extra
+  ```
 
 - This dependency is required for security:
-```bash
-composer require symfony/security-bundle
-```
+  ```bash
+  composer require symfony/security-bundle
+  ```
 
 - This dependency is used for file uploads:
-```bash
-composer require vich/uploader-bundle
-```
+  ```bash
+  composer require vich/uploader-bundle
+  ```
+
 - This dependency is used to set up a minimal API allowing VueJS to communicate with the Symfony backend.
   ```bash
   composer require api
@@ -85,6 +87,7 @@ composer require vich/uploader-bundle
   ```bash
   net start mySQL80
   ```
+
 - Commands to manage security and user logins:
   ```bash
   php bin/console security:hash-password
@@ -197,23 +200,5 @@ php bin/console make:crud Game
 php bin/console make:crud GameStat
 php bin/console make:crud Comment
 ```
-
-#### 🔄 Modifications
-
-##### Updated `show` function in `GameController`
-
-The `show` function was updated to display the details of a specific game based on its `id`.
-
-##### Updated `buildForm` functions in `GameStatType` and `CommentType`
-
-The `buildForm` function was updated to customize form fields, allowing the display of choices or user-friendly labels based on associated entity data, such as a person's `name` or a game's `title`.
-
-##### Updated `__construct` function in `Comment`
-
-The `__construct` function was updated to automatically initialize the `createdAt` field with the current date and time.
-
-##### Updated each `templates`
-
-The `format_date` modifications were made to ensure proper date formatting.
 
 ---

@@ -3,13 +3,14 @@
 ---
 
 ## 🎯 Ziel
-Erstellen Sie eine dynamische Website mit Symfony (PHP) und VueJS, um ein personalisiertes Steam-Benutzerprofil zu reproduzieren mit:
+Erstellen Sie eine dynamische Website mit Symfony (PHP) und VueJS, um ein personalisiertes Steam-Benutzerprofil nachzubilden mit:
 - Benutzerverwaltung (Benutzername, Avatar usw.) ✅
 - Spiele und Spielstatistiken ✅
 - Implementierung einer minimalen API für VueJS ❌
-- Eine saubere und relationale Basisstruktur ✅
+- Eine saubere und relationale Datenbankstruktur ✅
 
-- Verwalten von angezeigten Daten in der gewählten Sprache ✅
+### 🎯 Sekundäres Ziel
+- Verwaltung von Datumsangaben in der gewählten Sprache ✅
 - Avatar-Upload ✅
 - Ermöglichen, dass Benutzer die Sprache basierend auf ihren Vorlieben ändern können ✅
 - Hinzufügen von Sicherheit, sodass nur der Administrator Zugriff auf CRUD-Operationen hat ✅
@@ -41,31 +42,32 @@ composer require --dev profiler maker
 ```
 
 #### Produktionsabhängigkeiten:
-```bash
-composer require twig form validator orm asset
-```
-- Diese Abhängigkeiten werden für Übersetzungen und Datumsformatierung benötigt:
-```bash
-composer require symfony/translation
-composer require symfony/intl
-composer require twig/intl-extra
-```
+  ```bash
+  composer require twig form validator orm asset
+  ```
+- Diese Abhängigkeiten werden für Übersetzungen und Datumsformatierungen benötigt:
+  ```bash
+  composer require symfony/translation
+  composer require symfony/intl
+  composer require twig/intl-extra
+  ```
 
 - Diese Abhängigkeit wird für Sicherheit benötigt:
-```bash
-composer require symfony/security-bundle
-```
+  ```bash
+  composer require symfony/security-bundle
+  ```
 
 - Diese Abhängigkeit wird für Datei-Uploads verwendet:
-```bash
-composer require vich/uploader-bundle
-```
-- Diese Abhängigkeit wird benötigt, um eine minimale API einzurichten, die VueJS die Kommunikation mit dem Symfony-Backend ermöglicht.
+  ```bash
+  composer require vich/uploader-bundle
+  ```
+
+- Diese Abhängigkeit wird verwendet, um eine minimale API einzurichten, die VueJS die Kommunikation mit dem Symfony-Backend ermöglicht:
   ```bash
   composer require api
   ```
 
-- Diese Abhängigkeit wird verwendet, um Markdown-Text in HTML umzuwandeln.
+- Diese Abhängigkeit wird verwendet, um Markdown-Text in HTML umzuwandeln:
   ```bash
   composer require erusev/parsedown
   ```
@@ -85,13 +87,14 @@ composer require vich/uploader-bundle
   ```bash
   net start mySQL80
   ```
+
 - Befehle zur Verwaltung von Sicherheit und Benutzeranmeldungen:
   ```bash
   php bin/console security:hash-password
   php bin/console make:security:form-login
   ```
 
-- Befehl zum Erstellen eines Listeners, um `_locale` zu ändern und die Sprache basierend auf Benutzerpräferenzen zu ändern:
+- Befehl zum Erstellen eines Listeners, um `_locale` zu ändern, damit die Sprache basierend auf den Benutzervorlieben geändert werden kann:
   ```bash
   php bin/console make:listener
   ```
@@ -101,7 +104,7 @@ composer require vich/uploader-bundle
 ## 🧱 Symfony-Projektstruktur
 
 ### Datenbankkonfiguration
-In der `.env.local` Datei (zu erstellen):
+In der Datei `.env.local` (zu erstellen):
 ```env
 DATABASE_URL="mysql://user:pwd@localhost:3306/DBSteam?serverVersion=8"
 ```
@@ -123,7 +126,7 @@ Felder:
 - `username` (string)
 - `email` (string)
 - `avatar` (string, Dateipfad)
-- `avatarFile` (Datei, Vich\UploadableField)
+- `avatarFile` (File, Vich\UploadableField)
 - `updatedAt` (datetime_immutable)
 - `createdAt` (datetime_immutable)
 
@@ -197,23 +200,5 @@ php bin/console make:crud Game
 php bin/console make:crud GameStat
 php bin/console make:crud Comment
 ```
-
-#### 🔄 Änderungen
-
-##### Aktualisierte `show`-Funktion im `GameController`
-
-Die `show`-Funktion wurde aktualisiert, um die Details eines bestimmten Spiels basierend auf seiner `id` anzuzeigen.
-
-##### Aktualisierte `buildForm`-Funktionen in `GameStatType` und `CommentType`
-
-Die `buildForm`-Funktion wurde aktualisiert, um Formularfelder anzupassen, sodass benutzerfreundliche Labels oder Auswahlmöglichkeiten basierend auf den zugehörigen Entitätsdaten angezeigt werden, wie z. B. der `Name` einer Person oder der `Titel` eines Spiels.
-
-##### Aktualisierte `__construct`-Funktion in `Comment`
-
-Die `__construct`-Funktion wurde aktualisiert, um das Feld `createdAt` automatisch mit dem aktuellen Datum und der aktuellen Uhrzeit zu initialisieren.
-
-##### Aktualisierte `templates`
-
-Die `format_date`-Änderungen wurden vorgenommen, um eine ordnungsgemäße Datumsformatierung sicherzustellen.
 
 ---

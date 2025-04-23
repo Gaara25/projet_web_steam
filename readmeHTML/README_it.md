@@ -9,7 +9,8 @@ Creare un sito web dinamico utilizzando Symfony (PHP) e VueJS per replicare un p
 - Implementazione di una API minima per VueJS ❌
 - Una struttura di base pulita e relazionale ✅
 
-- Gestione delle date visualizzate nella lingua mantenuta ✅
+### 🎯 Obiettivo Secondario
+- Gestire le date visualizzate nella lingua mantenuta ✅
 - Caricamento avatar ✅
 - Consentire agli utenti di cambiare lingua in base alle loro preferenze ✅
 - Aggiungere sicurezza in modo che solo l'amministratore possa accedere alle operazioni CRUD ✅
@@ -20,7 +21,7 @@ Creare un sito web dinamico utilizzando Symfony (PHP) e VueJS per replicare un p
 
 ### Creazione del Progetto:
 ```bash
-composer create-project symfony/skeleton projet-steam
+composer create-project symfony/skeleton progetto-steam
 ```
 
 ### Configurare Git:
@@ -41,25 +42,26 @@ composer require --dev profiler maker
 ```
 
 #### Dipendenze di produzione:
-```bash
-composer require twig form validator orm asset
-```
+  ```bash
+  composer require twig form validator orm asset
+  ```
 - Queste dipendenze sono necessarie per la traduzione e la formattazione delle date:
-```bash
-composer require symfony/translation
-composer require symfony/intl
-composer require twig/intl-extra
-```
+  ```bash
+  composer require symfony/translation
+  composer require symfony/intl
+  composer require twig/intl-extra
+  ```
 
 - Questa dipendenza è necessaria per la sicurezza:
-```bash
-composer require symfony/security-bundle
-```
+  ```bash
+  composer require symfony/security-bundle
+  ```
 
 - Questa dipendenza è utilizzata per il caricamento dei file:
-```bash
-composer require vich/uploader-bundle
-```
+  ```bash
+  composer require vich/uploader-bundle
+  ```
+
 - Questa dipendenza è utilizzata per configurare una API minima che consente a VueJS di comunicare con il backend Symfony.
   ```bash
   composer require api
@@ -85,7 +87,8 @@ composer require vich/uploader-bundle
   ```bash
   net start mySQL80
   ```
-- Comandi per gestire la sicurezza e i login degli utenti:
+
+- Comandi per gestire la sicurezza e il login degli utenti:
   ```bash
   php bin/console security:hash-password
   php bin/console make:security:form-login
@@ -197,23 +200,5 @@ php bin/console make:crud Game
 php bin/console make:crud GameStat
 php bin/console make:crud Comment
 ```
-
-#### 🔄 Modifiche
-
-##### Funzione `show` aggiornata in `GameController`
-
-La funzione `show` è stata aggiornata per visualizzare i dettagli di un gioco specifico in base al suo `id`.
-
-##### Funzioni `buildForm` aggiornate in `GameStatType` e `CommentType`
-
-La funzione `buildForm` è stata aggiornata per personalizzare i campi del modulo, consentendo la visualizzazione di scelte o etichette user-friendly basate sui dati dell'entità associata, come il `name` di una persona o il `title` di un gioco.
-
-##### Funzione `__construct` aggiornata in `Comment`
-
-La funzione `__construct` è stata aggiornata per inizializzare automaticamente il campo `createdAt` con la data e l'ora correnti.
-
-##### Modificati i file `templates`
-
-Le modifiche `format_date` sono state apportate per garantire una corretta formattazione delle date.
 
 ---
