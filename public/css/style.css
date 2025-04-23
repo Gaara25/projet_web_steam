@@ -234,3 +234,13 @@ main {
 select {
     display: inline;
 }
+
+/********** readme ***************/
+.readme-content ul {
+    margin-left: 20px;
+}
+
+.readme-content ul li {
+    list-style-type: disc;
+    margin-left: 20px;
+}

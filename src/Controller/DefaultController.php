@@ -20,6 +20,7 @@ final class DefaultController extends AbstractController
         $readmeContent = file_get_contents($readmePath);
 
         $parsedown = new Parsedown();
+        $parsedown->setSafeMode(true);
         $readmeHtml = $parsedown->text($readmeContent);
 
         return $this->render('default/index.html.twig', [
