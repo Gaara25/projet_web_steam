@@ -5,10 +5,23 @@
 {% block body %}
     <h1>{{ 'game_stat_index'|trans }}</h1>
 
+    <form method="get" action="{{ path('app_game_stat_index') }}">
+        <label for="user">{{ 'select_user'|trans }}</label>
+        <select name="user" id="user" onchange="this.form.submit()">
+            <option value="">{{ 'all_users'|trans }}</option>
+            {% for user in users %}
+                <option value="{{ user.id }}" {% if app.request.get('user') == user.id %}selected{% endif %}>
+                    {{ user.username }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
+                <th>{{ 'game'|trans }}</th>
                 <th>{{ 'hours_played'|trans }}</th>
                 <th>{{ 'last_played'|trans }}</th>
                 <th>{{ 'actions'|trans }}</th>
@@ -18,6 +31,7 @@
         {% for game_stat in game_stats %}
             <tr>
                 <td>{{ game_stat.id }}</td>
+                <td>{{ game_stat.game.title }}</td>
                 <td>{{ game_stat.hoursPlayed }}</td>
                 <td>{{ game_stat.lastPlayed ? game_stat.lastPlayed|format_datetime('full') : '' }}</td>
                 <td>

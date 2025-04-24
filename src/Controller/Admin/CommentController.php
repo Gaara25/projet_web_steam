@@ -3,6 +3,8 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Comment;
+use App\Entity\User;
+use App\Repository\UserRepository;
 use App\Form\CommentType;
 use App\Repository\CommentRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -19,10 +21,20 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 final class CommentController extends AbstractController
 {
     #[Route(name: 'app_comment_index', methods: ['GET'])]
-    public function index(CommentRepository $commentRepository): Response
+    public function index(Request $request, CommentRepository $commentRepository, UserRepository $userRepository): Response
     {
+        $userId = $request->query->get('user');
+        $users = $userRepository->findAll();
+
+        if ($userId) {
+            $comments = $commentRepository->findBy(['user' => $userId]);
+        } else {
+            $comments = $commentRepository->findAll();
+        }
+
         return $this->render('comment/index.html.twig', [
-            'comments' => $commentRepository->findAll(),
+            'comments' => $comments,
+            'users' => $users,
         ]);
     }
 

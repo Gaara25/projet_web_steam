@@ -3,6 +3,21 @@
     margin: 20px;
 }
 
+.steam-profile > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.steam-profile > form > select {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 15%;
+    padding: 5px;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    height: 3rem;
+}
+
 .user-profile {
     text-align: center;
     margin-bottom: 30px;
@@ -16,11 +31,14 @@
 
 .user-games, .user-comments {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .games-list, .comments-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
     gap: 20px;
 }
 
@@ -38,15 +56,24 @@
 }
 
 .add-comment {
+    width: 30%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
 
-.add-comment form {
+.user-add-comments {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-add-comments > form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .add-comment textarea {

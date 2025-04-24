@@ -4,6 +4,19 @@
 
 {% block body %}
 <div class="steam-profile">
+
+    <!-- Section Choix Utilisateur -->
+    <form method="get" action="{{ path('steam_profile') }}">
+        <label for="user">{{ 'select_user'|trans }}</label>
+        <select name="user" id="user" onchange="this.form.submit()">
+            {% for user in users %}
+                <option value="{{ user.id }}" {% if app.request.get('user') == user.id %}selected{% endif %}>
+                    {{ user.username }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+
     <!-- Section Profil Utilisateur -->
     <div class="user-profile">
         <img src="{{ asset('uploads/avatars/' ~ user.avatar) }}" alt="{{ 'avatar'|trans }} {{ user.username }}" class="user-avatar" style="max-width: 100px; max-height: 100px;">
@@ -45,12 +58,14 @@
         </div>
     </div>
 
-    <h2>{{ 'add_comment'|trans }}</h2>
-    <div class="add-comment">
-        <form action="{{ path('add_comment', { 'id': user.id }) }}" method="post">
-            <textarea name="comment_content" placeholder="{{ 'write_comment'|trans }}" required></textarea>
-            <button type="submit">{{ 'submit'|trans }}</button>
-        </form>
+    <div class="user-add-comments">
+        <h2>{{ 'add_comment'|trans }}</h2>
+        <div class="add-comment">
+            <form action="{{ path('add_comment', { 'id': user.id }) }}" method="post">
+                <textarea name="comment_content" placeholder="{{ 'write_comment'|trans }}" required></textarea>
+                <button type="submit">{{ 'submit'|trans }}</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

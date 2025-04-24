@@ -23,6 +23,11 @@ body > header {
     font-size: 3vw ;
     opacity: 0.9 ;
 }
+body > header > h1 {
+    display: flex;
+    justify-content: center;
+}
+
 body > header h1 {
     font-size: 2em ;
     margin: 0;
@@ -73,12 +78,26 @@ body > header h1 {
 body {
     font-family: roboto, 'Open Sans', sans-serif;
     color: #444444;
-    background-color: aliceblue;
-    padding-bottom: 3em;
+    background-color: white;
+    padding-bottom: 4em;
 }
+
+body > form {
+    gap: 10px;
+}
+
+body > form > select {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 15%;
+    padding: 5px;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    height: 3rem;
+}
+
 body > header {
-    background-color: #607d8b;
-    color: #f0f0f0;
+    background-color: #171d25;
+    color: white;
     padding: 2vw 2vw 0 2vw;
     box-shadow: 0 2px 6px #444444;
 }
@@ -89,10 +108,23 @@ body > header > nav {
     height: auto ;
     box-shadow: none ;
 }
-body > header > nav a {
+
+body > header > nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+body > header > nav ul a {
     transition: all ease 0.5s ;
     border-radius: 3px 3px 0 0 ;
 }
+
+.right {
+    right: 0;
+    position: absolute;
+}
+
 body > header > nav li {
     display: inline-block;
     line-height: 1;
@@ -187,8 +219,8 @@ body > footer {
     bottom: 0;
     display: flex;
     align-items: center;
-    background-color: #607d8b;
-    color: #f0f0f0;
+    background-color: #171d25;
+    color: white;
     box-shadow: 0 -2px 6px #444444;
     width: 100%;
     min-height: 2em;

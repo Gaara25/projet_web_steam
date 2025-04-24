@@ -35,13 +35,11 @@
                 <li><a href="{{ path('app_game_stat_index') }}">{{ 'crud_gamestat'|trans }}</a></li>
                 <li><a href="{{ path('app_comment_index') }}">{{ 'crud_comment'|trans }}</a></li>
             {% endif %}
-            <ul>
             {% if app.user %}
                 <a href="{{ path('app_logout') }}" class="btn right">{{ 'logout'|trans }}</a>
             {% else %}
                 <a href="{{ path('app_login') }}" class="btn right">{{ 'login'|trans }}</a>
             {% endif %}
-            </ul>
         </ul>
     </nav>
 </header>

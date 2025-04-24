@@ -30,7 +30,7 @@ CREATE TABLE `comment` (
   PRIMARY KEY (`id`),
   KEY `IDX_9474526CA76ED395` (`user_id`),
   CONSTRAINT `FK_9474526CA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (1,1,'+rep','2025-04-15 00:24:00'),(2,1,'cheater ╰（‵□′）╯','2025-04-23 00:48:00'),(3,1,'+rep Very good teammate <3','2025-06-05 08:55:00'),(4,1,'Заебатый чел','2025-04-11 04:13:00');
+INSERT INTO `comment` VALUES (1,1,'+rep','2025-04-15 00:24:00'),(2,1,'cheater ╰（‵□′）╯','2025-04-23 00:48:00'),(3,1,'+rep Very good teammate <3','2025-06-05 08:55:00'),(4,1,'Заебатый чел','2025-04-11 04:13:00'),(11,3,'+rep','2025-04-25 00:20:00');
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +113,7 @@ CREATE TABLE `game_stat` (
   KEY `IDX_CBAD930DE48FD905` (`game_id`),
   CONSTRAINT `FK_CBAD930DA76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FK_CBAD930DE48FD905` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `game_stat` (
 
 LOCK TABLES `game_stat` WRITE;
 /*!40000 ALTER TABLE `game_stat` DISABLE KEYS */;
-INSERT INTO `game_stat` VALUES (1,1,1,1367,'2025-04-15 00:24:00'),(2,1,2,159,'2025-04-05 22:23:00'),(3,1,3,133,'2025-02-19 22:32:00'),(4,1,4,87,'2025-01-17 15:35:00'),(5,1,5,86,'2025-03-02 01:27:00'),(6,1,6,66,'2024-11-20 21:38:00'),(7,1,7,59,'2024-08-24 16:42:00');
+INSERT INTO `game_stat` VALUES (1,1,1,1367,'2025-04-15 00:24:00'),(2,1,2,159,'2025-04-05 22:23:00'),(3,1,3,133,'2025-02-19 22:32:00'),(4,1,4,87,'2025-01-17 15:35:00'),(5,1,5,86,'2025-03-02 01:27:00'),(6,1,6,66,'2024-11-20 21:38:00'),(7,1,7,59,'2024-08-24 16:42:00'),(8,3,2,1,'2025-01-02 00:20:00');
 /*!40000 ALTER TABLE `game_stat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,7 +141,7 @@ CREATE TABLE `user` (
   `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `updated_at` datetime DEFAULT NULL COMMENT '(DC2Type:datetime_immutable)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,7 +150,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Gaara25','axeljouvellier@orange.fr','Gaara25.jpg','2015-10-28 00:00:00','2025-04-16 04:38:35');
+INSERT INTO `user` VALUES (1,'Gaara25','axeljouvellier@orange.fr','Gaara25.jpg','2015-10-28 00:00:00','2025-04-16 04:38:35'),(3,'Valenthym','Valenthym@gmail.com','Valenthym.jpg','2021-05-24 00:00:00','2025-04-24 22:32:11');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,4 +190,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-23  2:40:06
+-- Dump completed on 2025-04-25  1:03:28

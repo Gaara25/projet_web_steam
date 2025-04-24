@@ -5,6 +5,18 @@
 {% block body %}
     <h1>{{ 'comment_index'|trans }}</h1>
 
+    <form method="get" action="{{ path('app_comment_index') }}">
+        <label for="user">{{ 'select_user'|trans }}</label>
+        <select name="user" id="user" onchange="this.form.submit()">
+            <option value="">{{ 'all_users'|trans }}</option>
+            {% for user in users %}
+                <option value="{{ user.id }}" {% if app.request.get('user') == user.id %}selected{% endif %}>
+                    {{ user.username }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+
     <table class="table">
         <thead>
             <tr>

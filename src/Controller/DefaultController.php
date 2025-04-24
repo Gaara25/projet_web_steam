@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,12 +30,15 @@ final class DefaultController extends AbstractController
     }
 
     #[Route('/steam/{id}', name: 'steam_profile', defaults: ['id' => 1])]
-    public function profile(int $id, EntityManagerInterface $entityManager): Response
+    public function profile(Request $request, UserRepository $userRepository, EntityManagerInterface $entityManager): Response
     {
-        $user = $entityManager->getRepository(User::class)->find($id);
+        $selectedUserId = $request->query->get('user', $request->attributes->get('id'));
+        $user = $entityManager->getRepository(User::class)->find($selectedUserId);
+        $users = $userRepository->findAll();
 
         return $this->render('steam/profile.html.twig', [
             'user' => $user,
+            'users' => $users,
         ]);
     }
 }

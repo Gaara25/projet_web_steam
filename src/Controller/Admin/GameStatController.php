@@ -3,6 +3,8 @@
 namespace App\Controller\Admin;
 
 use App\Entity\GameStat;
+use App\Entity\User;
+use App\Repository\UserRepository;
 use App\Form\GameStatType;
 use App\Repository\GameStatRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -19,10 +21,20 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 final class GameStatController extends AbstractController
 {
     #[Route(name: 'app_game_stat_index', methods: ['GET'])]
-    public function index(GameStatRepository $gameStatRepository): Response
+    public function index(Request $request, GameStatRepository $gameStatRepository, UserRepository $userRepository): Response
     {
+        $userId = $request->query->get('user');
+        $users = $userRepository->findAll();
+
+        if ($userId) {
+            $gameStats = $gameStatRepository->findBy(['user' => $userId]);
+        } else {
+            $gameStats = $gameStatRepository->findAll();
+        }
+
         return $this->render('game_stat/index.html.twig', [
-            'game_stats' => $gameStatRepository->findAll(),
+            'game_stats' => $gameStats,
+            'users' => $users,
         ]);
     }
 
