@@ -29,16 +29,18 @@
         <ul>
             <li><a href="{{ path('app_default') }}" class="tooltipped" data-tooltip="{{ 'back_home_tooltip'|trans }}">{{ 'home'|trans }}</a></li>
             <li><a href="{{ path('steam_profile') }}" class="tooltipped" data-tooltip="{{ 'preview_tooltip'|trans }}">{{ 'steam'|trans }}</a></li>
+            {% if app.user %}
+                <a href="{{ path('app_logout') }}" class="btn right">{{ 'logout'|trans }}</a>
+            {% else %}
+                <a href="{{ path('app_login') }}" class="btn right">{{ 'login'|trans }}</a>
+            {% endif %}
+        </ul>
+        <ul>
             {% if is_granted('ROLE_ADMIN') %}
                 <li><a href="{{ path('app_user_index') }}">{{ 'crud_user'|trans }}</a></li>
                 <li><a href="{{ path('app_game_index') }}">{{ 'crud_game'|trans }}</a></li>
                 <li><a href="{{ path('app_game_stat_index') }}">{{ 'crud_gamestat'|trans }}</a></li>
                 <li><a href="{{ path('app_comment_index') }}">{{ 'crud_comment'|trans }}</a></li>
-            {% endif %}
-            {% if app.user %}
-                <a href="{{ path('app_logout') }}" class="btn right">{{ 'logout'|trans }}</a>
-            {% else %}
-                <a href="{{ path('app_login') }}" class="btn right">{{ 'login'|trans }}</a>
             {% endif %}
         </ul>
     </nav>
@@ -48,7 +50,7 @@
     <p>{{ 'university_year'|trans }}</p>
     <form method="get" action="">
         <select name="_locale" onchange="this.form.submit()">
-            {% for locale, language in {'fr': 'FR', 'en': 'EN', 'es': 'ES', 'de': 'DE', 'it': 'IT'} %}
+            {% for locale, language in {'ar': 'AR', 'de': 'DE', 'en': 'EN', 'es': 'ES', 'fr': 'FR', 'it': 'IT', 'ja': 'JA', 'ko': 'KO', 'ru': 'RU', 'sv': 'SV', 'uk': 'UK', 'zh': 'ZH',}|sort %}
                 <option value="{{ locale }}" {% if app.request.getLocale() == locale %}selected{% endif %}>{{ language }}</option>
             {% endfor %}
         </select>

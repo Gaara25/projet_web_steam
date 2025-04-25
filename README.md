@@ -15,6 +15,46 @@ Créer un site web dynamique avec Symfony (PHP) et VueJS reproduisant le profil 
 - Pouvoir changer la langue selon la préférence de l'utilisateur ✅
 - Ajouter une sécurité pour que seul l'admin puisse voir les CRUD ✅
 
+---
+
+## 🚀 Installation
+
+### 🛠️ Prérequis
+
+- PHP 8.1 ou supérieur
+- Composer
+- Symfony CLI
+- MySQL 8.0 ou supérieur
+- Node.js
+
+### Clonez le dépôt :
+  ```bash
+  git clone https://github.com/Gaara25/projet_web_steam.git
+  cd projet_web_steam
+  ```
+
+## 🤝 Contributions
+Les contributions sont les bienvenues ! Pour contribuer :
+  - Synchronisez votre fork avec le dépôt principal (`git pull origin main`).
+  - Créez une branche pour votre fonctionnalité (`git checkout -b feature/ma-fonctionnalite`).
+  - Commitez vos modifications (`git commit -m "Ajout de ma fonctionnalité"`).
+  - Poussez votre branche (`git push origin feature/ma-fonctionnalite`).
+
+---
+
+## 📸 Captures d'écran
+
+### Page d'accueil
+![Page d'accueil](public/screenshot/screenshot-home.png)
+
+### Profil utilisateur
+![Profil utilisateur](public/screenshot/screenshot-profile.png)
+
+### CRUD en mode admin <!-- Le mot de passe dans mon dump est "admin". -->
+![Interface CRUD Admin](public/screenshot/screenshot-admin.png)
+
+---
+
 ## 🏗️ Mise en place du projet Symfony
 
 ### Création du projet :
@@ -174,7 +214,7 @@ Champs :
 - `id` (int)
 - `email` (string)
 - `roles` (array)
-- `password` (string)
+- `password` (string) <!-- Le mot de passe dans mon dump est "admin". -->
 
 ---
 

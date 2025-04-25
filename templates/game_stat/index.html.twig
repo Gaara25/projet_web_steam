@@ -4,8 +4,7 @@
 
 {% block body %}
     <h1>{{ 'game_stat_index'|trans }}</h1>
-
-    <form method="get" action="{{ path('app_game_stat_index') }}">
+    <form method="get" action="{{ path('app_game_stat_index') }}" class="select">
         <label for="user">{{ 'select_user'|trans }}</label>
         <select name="user" id="user" onchange="this.form.submit()">
             <option value="">{{ 'all_users'|trans }}</option>
@@ -21,7 +20,8 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>{{ 'game'|trans }}</th>
+                <th>{{ 'title'|trans }}</th>
+                <th>{{ 'image'|trans }}</th>
                 <th>{{ 'hours_played'|trans }}</th>
                 <th>{{ 'last_played'|trans }}</th>
                 <th>{{ 'actions'|trans }}</th>
@@ -32,6 +32,11 @@
             <tr>
                 <td>{{ game_stat.id }}</td>
                 <td>{{ game_stat.game.title }}</td>
+                <td>
+                    {% if game_stat.game.image %}
+                        <img src="{{ asset('gameImage/' ~ game_stat.game.image) }}" alt="{{ game_stat.game.title }}" style="max-width: 100px; max-height: 100px;" class="game-image" >
+                    {% endif %}
+                </td>
                 <td>{{ game_stat.hoursPlayed }}</td>
                 <td>{{ game_stat.lastPlayed ? game_stat.lastPlayed|format_datetime('full') : '' }}</td>
                 <td>
