@@ -17,6 +17,44 @@ Create a dynamic website using Symfony (PHP) and VueJS to replicate a personaliz
 
 ---
 
+## 🚀 Installation
+
+### 🛠️ Prerequisites
+
+- PHP 8.1 or higher
+- Composer
+- Symfony CLI
+- MySQL 8.0 or higher
+- Node.js
+
+### Clone the repository:
+```bash
+git clone https://github.com/Gaara25/projet_web_steam.git
+cd projet_web_steam
+```
+
+## 🤝 Contributions
+Contributions are welcome! To contribute:
+- Sync your fork with the main repository (`git pull origin main`).
+- Create a branch for your feature (`git checkout -b feature/my-feature`).
+- Commit your changes (`git commit -m "Add my feature"`).
+- Push your branch (`git push origin feature/my-feature`).
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](../public/screenshot/screenshot-home.png)
+
+### User Profile
+![User Profile](../public/screenshot/screenshot-profile.png)
+
+### Admin CRUD Interface <!-- The password in my dump is "admin" and the email is "admin@gmail.com". -->
+![Admin CRUD Interface](../public/screenshot/screenshot-admin.png)
+
+---
+
 ## 🏗️ Setting up the Symfony Project
 
 ### Project Creation:

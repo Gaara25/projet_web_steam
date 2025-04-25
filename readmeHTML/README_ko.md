@@ -17,6 +17,44 @@ Symfony (PHP)와 VueJS를 사용하여 개인화된 Steam 사용자 프로필을
 
 ---
 
+## 🚀 설치
+
+### 🛠️ 사전 요구 사항
+
+- PHP 8.1 이상
+- Composer
+- Symfony CLI
+- MySQL 8.0 이상
+- Node.js
+
+### 저장소 클론:
+```bash
+git clone https://github.com/Gaara25/projet_web_steam.git
+cd projet_web_steam
+```
+
+## 🤝 기여
+기여는 언제나 환영입니다! 기여하려면:
+- 포크한 저장소를 메인 저장소와 동기화하세요 (`git pull origin main`).
+- 기능을 위한 브랜치를 생성하세요 (`git checkout -b feature/my-feature`).
+- 변경 사항을 커밋하세요 (`git commit -m "Add my feature"`).
+- 브랜치를 푸시하세요 (`git push origin feature/my-feature`).
+
+---
+
+## 📸 스크린샷
+
+### 홈 페이지
+![홈 페이지](../public/screenshot/screenshot-home.png)
+
+### 사용자 프로필
+![사용자 프로필](../public/screenshot/screenshot-profile.png)
+
+### 관리자 CRUD 인터페이스 <!-- 내 덤프의 비밀번호는 "admin"이고 이메일은 "admin@gmail.com"입니다. -->
+![관리자 CRUD 인터페이스](../public/screenshot/screenshot-admin.png)
+
+---
+
 ## 🏗️ Symfony 프로젝트 설정
 
 ### 프로젝트 생성:

@@ -17,6 +17,44 @@ Symfony (PHP) と VueJS を使用して、パーソナライズされた Steam �
 
 ---
 
+## 🚀 インストール
+
+### 🛠️ 必要条件
+
+- PHP 8.1 以上
+- Composer
+- Symfony CLI
+- MySQL 8.0 以上
+- Node.js
+
+### リポジトリをクローン:
+```bash
+git clone https://github.com/Gaara25/projet_web_steam.git
+cd projet_web_steam
+```
+
+## 🤝 コントリビューション
+コントリビューションは歓迎します！コントリビューションするには:
+- フォークしたリポジトリをメインリポジトリと同期する (`git pull origin main`)。
+- 機能用のブランチを作成する (`git checkout -b feature/my-feature`)。
+- 変更をコミットする (`git commit -m "Add my feature"`)。
+- ブランチをプッシュする (`git push origin feature/my-feature`)。
+
+---
+
+## 📸 スクリーンショット
+
+### ホームページ
+![ホームページ](../public/screenshot/screenshot-home.png)
+
+### ユーザープロフィール
+![ユーザープロフィール](../public/screenshot/screenshot-profile.png)
+
+### 管理者CRUDインターフェース <!-- ダンプ内のパスワードは "admin"、メールアドレスは "admin@gmail.com" です。 -->
+![管理者CRUDインターフェース](../public/screenshot/screenshot-admin.png)
+
+---
+
 ## 🏗️ Symfonyプロジェクトのセットアップ
 
 ### プロジェクト作成:

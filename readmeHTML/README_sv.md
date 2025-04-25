@@ -17,6 +17,44 @@ Skapa en dynamisk webbplats med Symfony (PHP) och VueJS för att replikera en pe
 
 ---
 
+## 🚀 Installation
+
+### 🛠️ Förutsättningar
+
+- PHP 8.1 eller högre
+- Composer
+- Symfony CLI
+- MySQL 8.0 eller högre
+- Node.js
+
+### Klona repositoryt:
+```bash
+git clone https://github.com/Gaara25/projet_web_steam.git
+cd projet_web_steam
+```
+
+## 🤝 Bidrag
+Bidrag är välkomna! För att bidra:
+- Synkronisera din fork med huvudrepositoryt (`git pull origin main`).
+- Skapa en gren för din funktion (`git checkout -b feature/my-feature`).
+- Begå dina ändringar (`git commit -m "Add my feature"`).
+- Skjut upp din gren (`git push origin feature/my-feature`).
+
+---
+
+## 📸 Skärmdumpar
+
+### Startsida
+![Startsida](../public/screenshot/screenshot-home.png)
+
+### Användarprofil
+![Användarprofil](../public/screenshot/screenshot-profile.png)
+
+### Admin CRUD-gränssnitt <!-- Lösenordet i min dump är "admin" och e-posten är "admin@gmail.com". -->
+![Admin CRUD-gränssnitt](../public/screenshot/screenshot-admin.png)
+
+---
+
 ## 🏗️ Installera Symfony-projektet
 
 ### Skapa projektet:

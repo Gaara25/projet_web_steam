@@ -17,6 +17,44 @@
 
 ---
 
+## 🚀 安装
+
+### 🛠️ 先决条件
+
+- PHP 8.1 或更高版本
+- Composer
+- Symfony CLI
+- MySQL 8.0 或更高版本
+- Node.js
+
+### 克隆仓库：
+```bash
+git clone https://github.com/Gaara25/projet_web_steam.git
+cd projet_web_steam
+```
+
+## 🤝 贡献
+欢迎贡献！贡献步骤如下：
+- 将您的 fork 与主仓库同步（`git pull origin main`）。
+- 为您的功能创建一个分支（`git checkout -b feature/my-feature`）。
+- 提交您的更改（`git commit -m "Add my feature"`）。
+- 推送您的分支（`git push origin feature/my-feature`）。
+
+---
+
+## 📸 截图
+
+### 首页
+![首页](../public/screenshot/screenshot-home.png)
+
+### 用户个人资料
+![用户个人资料](../public/screenshot/screenshot-profile.png)
+
+### 管理员 CRUD 界面 <!-- 我的数据库转储中的密码是 "admin"，电子邮件是 "admin@gmail.com"。 -->
+![管理员 CRUD 界面](../public/screenshot/screenshot-admin.png)
+
+---
+
 ## 🏗️ 设置 Symfony 项目
 
 ### 创建项目：

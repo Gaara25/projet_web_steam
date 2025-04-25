@@ -17,6 +17,44 @@ Crear un sitio web dinámico utilizando Symfony (PHP) y VueJS para replicar un p
 
 ---
 
+## 🚀 Instalación
+
+### 🛠️ Requisitos Previos
+
+- PHP 8.1 o superior
+- Composer
+- Symfony CLI
+- MySQL 8.0 o superior
+- Node.js
+
+### Clona el repositorio:
+  ```bash
+  git clone https://github.com/Gaara25/projet_web_steam.git
+  cd projet_web_steam
+  ```
+
+## 🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Para contribuir:
+  - Sincroniza tu fork con el repositorio principal (`git pull origin main`).
+  - Crea una rama para tu funcionalidad (`git checkout -b feature/mi-funcionalidad`).
+  - Realiza tus cambios y haz un commit (`git commit -m "Añadida mi funcionalidad"`).
+  - Sube tu rama (`git push origin feature/mi-funcionalidad`).
+
+---
+
+## 📸 Capturas de Pantalla
+
+### Página de inicio
+![Página de inicio](../public/screenshot/screenshot-home.png)
+
+### Perfil de usuario
+![Perfil de usuario](../public/screenshot/screenshot-profile.png)
+
+### CRUD en modo administrador <!-- La contraseña en mi volcado es "admin" y el correo es "admin@gmail.com". -->
+![Interfaz CRUD Admin](../public/screenshot/screenshot-admin.png)
+
+---
+
 ## 🏗️ Configuración del Proyecto Symfony
 
 ### Creación del Proyecto:

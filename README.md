@@ -50,7 +50,7 @@ Les contributions sont les bienvenues ! Pour contribuer :
 ### Profil utilisateur
 ![Profil utilisateur](public/screenshot/screenshot-profile.png)
 
-### CRUD en mode admin <!-- Le mot de passe dans mon dump est "admin". -->
+### CRUD en mode admin <!-- Le mot de passe dans mon dump est "admin" et le mail est "admin@gmail.com". -->
 ![Interface CRUD Admin](public/screenshot/screenshot-admin.png)
 
 ---
@@ -214,7 +214,7 @@ Champs :
 - `id` (int)
 - `email` (string)
 - `roles` (array)
-- `password` (string) <!-- Le mot de passe dans mon dump est "admin". -->
+- `password` (string)
 
 ---
 
