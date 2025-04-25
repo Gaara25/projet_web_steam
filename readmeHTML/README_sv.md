@@ -45,13 +45,14 @@ Bidrag är välkomna! För att bidra:
 ## 📸 Skärmdumpar
 
 ### Startsida
-![Startsida](../public/screenshot/screenshot-home.png)
+![Startsida](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### Användarprofil
-![Användarprofil](../public/screenshot/screenshot-profile.png)
+![Användarprofil](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### Admin CRUD-gränssnitt <!-- Lösenordet i min dump är "admin" och e-posten är "admin@gmail.com". -->
-![Admin CRUD-gränssnitt](../public/screenshot/screenshot-admin.png)
+### Admin CRUD-gränssnitt 
+<!-- Lösenordet i min dump är "admin" och e-posten är "admin@gmail.com". -->
+![Admin CRUD-gränssnitt](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 

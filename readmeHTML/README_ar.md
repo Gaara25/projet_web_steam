@@ -45,13 +45,14 @@
 ## 📸 لقطات الشاشة
 
 ### الصفحة الرئيسية
-![الصفحة الرئيسية](../public/screenshot/screenshot-home.png)
+![الصفحة الرئيسية](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### ملف المستخدم
-![ملف المستخدم](../public/screenshot/screenshot-profile.png)
+![ملف المستخدم](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### CRUD في وضع المسؤول <!-- كلمة المرور في قاعدة البيانات الخاصة بي هي "admin" والبريد الإلكتروني هو "admin@gmail.com". -->
-![واجهة CRUD للمسؤول](../public/screenshot/screenshot-admin.png)
+### CRUD في وضع المسؤول 
+<!-- كلمة المرور في قاعدة البيانات الخاصة بي هي "admin" والبريد الإلكتروني هو "admin@gmail.com". -->
+![واجهة CRUD للمسؤول](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 

@@ -45,13 +45,14 @@ cd projet_web_steam
 ## 📸 截图
 
 ### 首页
-![首页](../public/screenshot/screenshot-home.png)
+![首页](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### 用户个人资料
-![用户个人资料](../public/screenshot/screenshot-profile.png)
+![用户个人资料](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### 管理员 CRUD 界面 <!-- 我的数据库转储中的密码是 "admin"，电子邮件是 "admin@gmail.com"。 -->
-![管理员 CRUD 界面](../public/screenshot/screenshot-admin.png)
+### 管理员 CRUD 界面 
+<!-- 我的数据库转储中的密码是 "admin"，电子邮件是 "admin@gmail.com"。 -->
+![管理员 CRUD 界面](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 

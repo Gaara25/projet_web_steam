@@ -45,13 +45,14 @@ Beiträge sind willkommen! Um beizutragen:
 ## 📸 Screenshots
 
 ### Startseite
-![Startseite](../public/screenshot/screenshot-home.png)
+![Startseite](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### Benutzerprofil
-![Benutzerprofil](../public/screenshot/screenshot-profile.png)
+![Benutzerprofil](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### CRUD im Admin-Modus <!-- Das Passwort in meinem Dump ist "admin" und die E-Mail lautet "admin@gmail.com". -->
-![CRUD-Admin-Oberfläche](../public/screenshot/screenshot-admin.png)
+### CRUD im Admin-Modus 
+<!-- Das Passwort in meinem Dump ist "admin" und die E-Mail lautet "admin@gmail.com". -->
+![CRUD-Admin-Oberfläche](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 

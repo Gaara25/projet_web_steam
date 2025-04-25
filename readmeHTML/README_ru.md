@@ -45,13 +45,14 @@ cd projet_web_steam
 ## 📸 Скриншоты
 
 ### Главная страница
-![Главная страница](../public/screenshot/screenshot-home.png)
+![Главная страница](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### Профиль пользователя
-![Профиль пользователя](../public/screenshot/screenshot-profile.png)
+![Профиль пользователя](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### Интерфейс CRUD для администратора <!-- Пароль в моем дампе: "admin", а email: "admin@gmail.com". -->
-![Интерфейс CRUD для администратора](../public/screenshot/screenshot-admin.png)
+### Интерфейс CRUD для администратора 
+<!-- Пароль в моем дампе: "admin", а email: "admin@gmail.com". -->
+![Интерфейс CRUD для администратора](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 

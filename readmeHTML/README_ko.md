@@ -45,13 +45,14 @@ cd projet_web_steam
 ## 📸 스크린샷
 
 ### 홈 페이지
-![홈 페이지](../public/screenshot/screenshot-home.png)
+![홈 페이지](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### 사용자 프로필
-![사용자 프로필](../public/screenshot/screenshot-profile.png)
+![사용자 프로필](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### 관리자 CRUD 인터페이스 <!-- 내 덤프의 비밀번호는 "admin"이고 이메일은 "admin@gmail.com"입니다. -->
-![관리자 CRUD 인터페이스](../public/screenshot/screenshot-admin.png)
+### 관리자 CRUD 인터페이스 
+<!-- 내 덤프의 비밀번호는 "admin"이고 이메일은 "admin@gmail.com"입니다. -->
+![관리자 CRUD 인터페이스](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 

@@ -45,13 +45,14 @@ cd projet_web_steam
 ## 📸 スクリーンショット
 
 ### ホームページ
-![ホームページ](../public/screenshot/screenshot-home.png)
+![ホームページ](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### ユーザープロフィール
-![ユーザープロフィール](../public/screenshot/screenshot-profile.png)
+![ユーザープロフィール](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### 管理者CRUDインターフェース <!-- ダンプ内のパスワードは "admin"、メールアドレスは "admin@gmail.com" です。 -->
-![管理者CRUDインターフェース](../public/screenshot/screenshot-admin.png)
+### 管理者CRUDインターフェース 
+<!-- ダンプ内のパスワードは "admin"、メールアドレスは "admin@gmail.com" です。 -->
+![管理者CRUDインターフェース](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 

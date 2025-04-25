@@ -45,13 +45,14 @@ I contributi sono benvenuti! Per contribuire:
 ## 📸 Screenshot
 
 ### Pagina Home
-![Pagina Home](../public/screenshot/screenshot-home.png)
+![Pagina Home](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### Profilo Utente
-![Profilo Utente](../public/screenshot/screenshot-profile.png)
+![Profilo Utente](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### Interfaccia CRUD Admin <!-- La password nel mio dump è "admin" e l'email è "admin@gmail.com". -->
-![Interfaccia CRUD Admin](../public/screenshot/screenshot-admin.png)
+### Interfaccia CRUD Admin 
+<!-- La password nel mio dump è "admin" e l'email è "admin@gmail.com". -->
+![Interfaccia CRUD Admin](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 

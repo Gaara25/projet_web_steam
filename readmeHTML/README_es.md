@@ -45,13 +45,14 @@ Crear un sitio web dinámico utilizando Symfony (PHP) y VueJS para replicar un p
 ## 📸 Capturas de Pantalla
 
 ### Página de inicio
-![Página de inicio](../public/screenshot/screenshot-home.png)
+![Página de inicio](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-home.png?raw=true)
 
 ### Perfil de usuario
-![Perfil de usuario](../public/screenshot/screenshot-profile.png)
+![Perfil de usuario](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### CRUD en modo administrador <!-- La contraseña en mi volcado es "admin" y el correo es "admin@gmail.com". -->
-![Interfaz CRUD Admin](../public/screenshot/screenshot-admin.png)
+### CRUD en modo administrador 
+<!-- La contraseña en mi volcado es "admin" y el correo es "admin@gmail.com". -->
+![Interfaz CRUD Admin](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
 ---
 
