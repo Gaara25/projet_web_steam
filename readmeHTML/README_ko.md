@@ -134,7 +134,8 @@ composer require --dev profiler maker
 
 - 사용자의 선호 언어에 따라 `_locale`을 변경하는 리스너 생성 명령어:
   ```bash
-  php bin/console make:listener
+  php bin/console make:listener LocaleSubscriber
+      1. KernelEvents::REQUEST
   ```
 
 ---

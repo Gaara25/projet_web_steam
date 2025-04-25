@@ -134,7 +134,8 @@ composer require --dev profiler maker
 
 - 创建监听器以根据用户偏好更改语言的 `_locale`：
   ```bash
-  php bin/console make:listener
+  php bin/console make:listener LocaleSubscriber
+      1. KernelEvents::REQUEST
   ```
 
 ---

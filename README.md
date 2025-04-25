@@ -135,6 +135,8 @@ git push -u origin main
 - Commande pour créer un listener qui modifie `_locale` afin de changer la langue selon la préférence de l'utilisateur
   ```bash
   php bin/console make:listener
+      1. LocaleSubscriber
+      2. KernelEvents::REQUEST
   ```
 
 ---
