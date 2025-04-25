@@ -4,8 +4,10 @@ namespace App\Entity;
 
 use App\Repository\GameStatRepository;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
 
 #[ORM\Entity(repositoryClass: GameStatRepository::class)]
+#[ApiResource]
 class GameStat
 {
     #[ORM\Id]
