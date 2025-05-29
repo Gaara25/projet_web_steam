@@ -4,16 +4,24 @@
 
 ## 🎯 Objectif
 Créer un site web dynamique avec Symfony (PHP) et VueJS reproduisant le profil Steam d’un utilisateur personnalisé avec :
+
+### Symfony
 - Gestion des utilisateurs (pseudo, avatar…) ✅
 - Jeux et statistiques de jeu ✅
 - Mise en place d’une API minimale pour VueJS ✅
 - Une structure de base propre et relationnelle ✅
 
-### 🎯 Objectif secondaire
+#### 🎯 Objectif secondaire
 - Gérer des dates affichées en langage maintenu ✅
 - Upload d’avatar ✅
 - Pouvoir changer la langue selon la préférence de l'utilisateur ✅
 - Ajouter une sécurité pour que seul l'admin puisse voir les CRUD ✅
+
+### VueJS 
+- Utilisation de plusieurs composants ❌
+- Utilisation du routeur ❌
+- Utilisation de pinia ❌
+- Une partie du site utilisera l’API de Symfony pour afficher de manière dynamique des données. ❌
 
 ---
 
@@ -242,3 +250,21 @@ php bin/console make:crud Comment
 ```
 
 ---
+
+## 🏗️ Mise en place du projet Symfony
+
+- Cette dépendance est nécessaire pour assurer la compatibilité entre les modules PHP et JavaScript de ce projet.
+  ```bash
+  composer require symfony/webpack-encore-bundle
+  ```
+
+
+  ```bash
+  npm install vue-router@4 pinia axios vue-i18n@next react react-dom prop-types vue-loader@^17.0.0
+
+  ```
+
+## 🧱 Structure du projet VueJS
+
+
+# Éco-conception du projet
