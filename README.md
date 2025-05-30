@@ -251,20 +251,39 @@ php bin/console make:crud Comment
 
 ---
 
-## 🏗️ Mise en place du projet Symfony
+## 🏗️ Mise en place du projet VuesJS
 
 - Cette dépendance est nécessaire pour assurer la compatibilité entre les modules PHP et JavaScript de ce projet.
   ```bash
   composer require symfony/webpack-encore-bundle
   ```
 
-
+- Installation des dépendances nécessaires.
   ```bash
-  npm install vue-router@4 pinia axios vue-i18n@next react react-dom prop-types vue-loader@^17.0.0
-
+  npm install vue-router@4 pinia axios react react-dom prop-types vue-loader@^17.0.0
   ```
 
-## 🧱 Structure du projet VueJS
+---
 
+## 🌱 Éco-conception du projet
 
-# Éco-conception du projet
+### Audit RGAA (Référentiel Général d’Amélioration de l’Accessibilité)
+Un audit a été mené pour vérifier la conformité du projet avec le RGAA :
+- **Structure sémantique** : Utilisation appropriée des balises HTML (`header`, `nav`, `main`, `footer`, etc.) pour garantir une navigation accessible.
+- **Contrastes** : Les couleurs utilisées respectent les ratios de contraste recommandés pour assurer la lisibilité des contenus.
+- **Navigation clavier** : Toutes les fonctionnalités principales sont accessibles au clavier.
+- **Alternatives textuelles** : Les images disposent d’attributs `alt` pertinents.
+- **Formulaires** : Les champs de formulaire sont correctement étiquetés et accessibles.
+
+### Audit RGESN (Référentiel Général d’Écoconception des Services Numériques)
+L’audit RGESN a permis d’identifier et d’appliquer plusieurs bonnes pratiques :
+- **Lazy loading** : Mise en place du chargement différé des images pour réduire l’impact environnemental lors du chargement des pages.
+- **Minimisation des dépendances** : Seules les librairies nécessaires sont installées côté frontend et backend.
+- **Gestion du cache** : Utilisation du cache navigateur pour limiter les requêtes serveur inutiles.
+- **API optimisée** : Les endpoints exposés par Symfony ne retournent que les données nécessaires à l’affichage, limitant ainsi le volume de données échangées.
+
+### Actions d’écoconception mises en œuvre
+- **Suppression des ressources inutilisées** : Nettoyage régulier du code et suppression des dépendances non utilisées.
+- **Documentation** : Sensibilisation à l’écoconception dans la documentation du projet pour encourager de futures contributions responsables.
+
+Ces actions contribuent à rendre le projet plus accessible, performant et respectueux de l’environnement numérique.

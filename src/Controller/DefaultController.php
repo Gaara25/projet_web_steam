@@ -29,6 +29,7 @@ final class DefaultController extends AbstractController
         ]);
     }
 
+    
     #[Route('/steam/{id}', name: 'steam_profile', defaults: ['id' => 1])]
     public function profile(Request $request, UserRepository $userRepository, EntityManagerInterface $entityManager): Response
     {

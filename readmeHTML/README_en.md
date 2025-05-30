@@ -242,3 +242,40 @@ php bin/console make:crud Comment
 ```
 
 ---
+
+## 🏗️ Setting up the VueJS Project
+
+- This dependency is required to ensure compatibility between the PHP and JavaScript modules of this project.
+  ```bash
+  composer require symfony/webpack-encore-bundle
+  ```
+
+- Install the necessary dependencies.
+  ```bash
+  npm install vue-router@4 pinia axios react react-dom prop-types vue-loader@^17.0.0
+  ```
+
+---
+
+## 🌱 Eco-design of the Project
+
+### RGAA Audit (General Accessibility Improvement Reference)
+An audit was conducted to verify the project's compliance with the RGAA:
+- **Semantic structure**: Appropriate use of HTML tags (`header`, `nav`, `main`, `footer`, etc.) to ensure accessible navigation.
+- **Contrast**: The colors used respect the recommended contrast ratios to ensure content readability.
+- **Keyboard navigation**: All main features are accessible via keyboard.
+- **Text alternatives**: Images have relevant `alt` attributes.
+- **Forms**: Form fields are properly labeled and accessible.
+
+### RGESN Audit (General Reference for Eco-design of Digital Services)
+The RGESN audit identified and applied several best practices:
+- **Lazy loading**: Implemented deferred image loading to reduce environmental impact when loading pages.
+- **Minimizing dependencies**: Only necessary libraries are installed on both frontend and backend.
+- **Cache management**: Browser cache is used to limit unnecessary server requests.
+- **Optimized API**: Symfony endpoints only return the data necessary for display, thus limiting the volume of data exchanged.
+
+### Eco-design actions implemented
+- **Removal of unused resources**: Regular code cleanup and removal of unused dependencies.
+- **Documentation**: Raising awareness of eco-design in the project documentation to encourage responsible future contributions.
+
+These actions help make the project more accessible, efficient, and environmentally friendly.

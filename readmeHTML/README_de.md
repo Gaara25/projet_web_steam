@@ -50,7 +50,7 @@ Beiträge sind willkommen! Um beizutragen:
 ### Benutzerprofil
 ![Benutzerprofil](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-profile.png?raw=true)
 
-### CRUD im Admin-Modus 
+### CRUD im Admin-Modus
 <!-- Das Passwort in meinem Dump ist "admin" und die E-Mail lautet "admin@gmail.com". -->
 ![CRUD-Admin-Oberfläche](https://github.com/Gaara25/projet_web_steam/blob/main/public/screenshot/screenshot-admin.png?raw=true)
 
@@ -112,17 +112,17 @@ composer require --dev profiler maker
   ```
 
 ### Einige nützliche Befehle:
-  
-- Lokalen Server starten:  
+
+- Lokalen Server starten:
   ```bash
   symfony local:server:start
   ```
 
-- MySQL unter Linux starten:  
+- MySQL unter Linux starten:
   ```bash
   sudo service mysql start
   ```
-  oder unter Windows:  
+  oder unter Windows:
   ```bash
   net start mySQL80
   ```
@@ -157,7 +157,7 @@ php bin/console doctrine:database:create
 ### Erstellte Entitäten
 
 #### 🧍‍♂️`User`
-Befehl zum Generieren der Entität:  
+Befehl zum Generieren der Entität:
 ```bash
 php bin/console make:entity User
 ```
@@ -171,7 +171,7 @@ Felder:
 - `createdAt` (datetime_immutable)
 
 #### 🎮`Game`
-Befehl zum Generieren der Entität:  
+Befehl zum Generieren der Entität:
 ```bash
 php bin/console make:entity Game
 ```
@@ -183,7 +183,7 @@ Felder:
 - `releaseDate` (date)
 
 #### 📊`GameStat`
-Befehl zum Generieren der Entität:  
+Befehl zum Generieren der Entität:
 ```bash
 php bin/console make:entity GameStat
 ```
@@ -196,7 +196,7 @@ Felder:
   - `game` → ManyToOne zu `Game`
 
 #### 💬`Comment`
-Befehl zum Generieren der Entität:  
+Befehl zum Generieren der Entität:
 ```bash
 php bin/console make:entity Comment
 ```
@@ -208,7 +208,7 @@ Felder:
   - `user` → ManyToOne zu `User`
 
 #### 🔒`UserAuthenticator`
-Befehl zum Generieren der Entität:  
+Befehl zum Generieren der Entität:
 ```bash
 php bin/console make:user
 ```
@@ -221,11 +221,11 @@ Felder:
 ---
 
 ### Generieren und Ausführen von Migrationen
-- Migrationen generieren:  
+- Migrationen generieren:
   ```bash
   php bin/console make:migration
   ```
-- Migrationen ausführen:  
+- Migrationen ausführen:
   ```bash
   php bin/console doctrine:migrations:migrate
   ```
@@ -242,3 +242,40 @@ php bin/console make:crud Comment
 ```
 
 ---
+
+## 🏗️ Einrichtung des VueJS-Projekts
+
+- Diese Abhängigkeit ist notwendig, um die Kompatibilität zwischen den PHP- und JavaScript-Modulen dieses Projekts sicherzustellen.
+  ```bash
+  composer require symfony/webpack-encore-bundle
+  ```
+
+- Installation der notwendigen Abhängigkeiten.
+  ```bash
+  npm install vue-router@4 pinia axios react react-dom prop-types vue-loader@^17.0.0
+  ```
+
+---
+
+## 🌱 Ökodesign des Projekts
+
+### RGAA-Audit (Allgemeines Referenzsystem zur Verbesserung der Barrierefreiheit)
+Es wurde ein Audit durchgeführt, um die Konformität des Projekts mit dem RGAA zu überprüfen:
+- **Semantische Struktur**: Angemessene Verwendung von HTML-Tags (`header`, `nav`, `main`, `footer` usw.), um eine barrierefreie Navigation zu gewährleisten.
+- **Kontraste**: Die verwendeten Farben beachten die empfohlenen Kontrastverhältnisse, um die Lesbarkeit der Inhalte zu gewährleisten.
+- **Tastaturnavigation**: Alle Hauptfunktionen sind per Tastatur zugänglich.
+- **Textalternativen**: Bilder verfügen über relevante `alt`-Attribute.
+- **Formulare**: Formularfelder sind korrekt beschriftet und zugänglich.
+
+### RGESN-Audit (Allgemeines Referenzsystem für Ökodesign digitaler Dienste)
+Das RGESN-Audit ermöglichte die Identifizierung und Anwendung mehrerer bewährter Praktiken:
+- **Lazy Loading**: Implementierung des verzögerten Ladens von Bildern, um die Umweltauswirkungen beim Laden der Seiten zu reduzieren.
+- **Minimierung der Abhängigkeiten**: Nur die notwendigen Bibliotheken werden auf Frontend- und Backend-Seite installiert.
+- **Cache-Management**: Verwendung des Browser-Caches, um unnötige Serveranfragen zu begrenzen.
+- **Optimierte API**: Die von Symfony bereitgestellten Endpunkte geben nur die für die Anzeige notwendigen Daten zurück, wodurch das Volumen der ausgetauschten Daten begrenzt wird.
+
+### Umgesetzte Ökodesign-Maßnahmen
+- **Entfernung ungenutzter Ressourcen**: Regelmäßige Codebereinigung und Entfernung nicht verwendeter Abhängigkeiten.
+- **Dokumentation**: Sensibilisierung für Ökodesign in der Projektdokumentation, um zukünftige verantwortungsvolle Beiträge zu fördern.
+
+Diese Maßnahmen tragen dazu bei, das Projekt zugänglicher, leistungsfähiger und umweltfreundlicher im digitalen Raum zu gestalten.

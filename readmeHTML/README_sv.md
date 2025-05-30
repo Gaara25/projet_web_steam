@@ -242,3 +242,40 @@ php bin/console make:crud Comment
 ```
 
 ---
+
+## 🏗️ Installera VueJS-projektet
+
+- Detta beroende krävs för att säkerställa kompatibilitet mellan PHP- och JavaScript-moduler i projektet.
+  ```bash
+  composer require symfony/webpack-encore-bundle
+  ```
+
+- Installera nödvändiga beroenden.
+  ```bash
+  npm install vue-router@4 pinia axios react react-dom prop-types vue-loader@^17.0.0
+  ```
+
+---
+
+## 🌱 Ekodesign av projektet
+
+### RGAA-granskning (Tillgänglighet)
+En granskning har genomförts för att säkerställa att projektet följer RGAA:
+- **Semantisk struktur**: Korrekt användning av HTML-taggar (`header`, `nav`, `main`, `footer`, etc.) för tillgänglig navigering.
+- **Kontraster**: Färgerna uppfyller rekommenderade kontrastkrav för läsbarhet.
+- **Tangentbordsnavigering**: Alla huvudfunktioner är tillgängliga via tangentbordet.
+- **Alternativtext**: Bilder har relevanta `alt`-attribut.
+- **Formulär**: Formulärfält är korrekt märkta och tillgängliga.
+
+### RGESN-granskning (Ekodesign)
+RGESN-granskningen har identifierat och implementerat flera goda metoder:
+- **Lazy loading**: Bilder laddas in vid behov för att minska miljöpåverkan.
+- **Minimering av beroenden**: Endast nödvändiga bibliotek installeras på frontend och backend.
+- **Cachehantering**: Webbläsarcache används för att minska onödiga serverförfrågningar.
+- **Optimerat API**: Endast nödvändiga data skickas från Symfony till frontend.
+
+### Genomförda ekodesignåtgärder
+- **Borttagning av oanvända resurser**: Regelbunden kodstädning och borttagning av onödiga beroenden.
+- **Dokumentation**: Ekodesign lyfts fram i projektets dokumentation för att uppmuntra ansvarsfulla framtida bidrag.
+
+Dessa åtgärder bidrar till att göra projektet mer tillgängligt, effektivt och miljövänligt.

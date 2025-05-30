@@ -242,3 +242,40 @@ php bin/console make:crud Comment
 ```
 
 ---
+
+## 🏗️ Configurazione del progetto VueJS
+
+- Questa dipendenza è necessaria per garantire la compatibilità tra i moduli PHP e JavaScript di questo progetto.
+  ```bash
+  composer require symfony/webpack-encore-bundle
+  ```
+
+- Installazione delle dipendenze necessarie.
+  ```bash
+  npm install vue-router@4 pinia axios react react-dom prop-types vue-loader@^17.0.0
+  ```
+
+---
+
+## 🌱 Eco-design del progetto
+
+### Audit RGAA (Référentiel Général d’Amélioration de l’Accessibilité)
+È stato condotto un audit per verificare la conformità del progetto al RGAA:
+- **Struttura semantica**: Uso appropriato dei tag HTML (`header`, `nav`, `main`, `footer`, ecc.) per garantire una navigazione accessibile.
+- **Contrasti**: I colori utilizzati rispettano i rapporti di contrasto raccomandati per assicurare la leggibilità dei contenuti.
+- **Navigazione da tastiera**: Tutte le funzionalità principali sono accessibili tramite tastiera.
+- **Alternative testuali**: Le immagini dispongono di attributi `alt` pertinenti.
+- **Form**: I campi dei form sono correttamente etichettati e accessibili.
+
+### Audit RGESN (Référentiel Général d’Écoconception des Services Numériques)
+L’audit RGESN ha permesso di identificare e applicare diverse buone pratiche:
+- **Lazy loading**: Implementazione del caricamento differito delle immagini per ridurre l’impatto ambientale durante il caricamento delle pagine.
+- **Minimizzazione delle dipendenze**: Solo le librerie necessarie sono installate sia lato frontend che backend.
+- **Gestione della cache**: Utilizzo della cache del browser per limitare le richieste inutili al server.
+- **API ottimizzata**: Gli endpoint esposti da Symfony restituiscono solo i dati necessari alla visualizzazione, limitando così il volume di dati scambiati.
+
+### Azioni di eco-design implementate
+- **Eliminazione delle risorse inutilizzate**: Pulizia regolare del codice e rimozione delle dipendenze non utilizzate.
+- **Documentazione**: Sensibilizzazione all’eco-design nella documentazione del progetto per incoraggiare futuri contributi responsabili.
+
+Queste azioni contribuiscono a rendere il progetto più accessibile, performante e rispettoso dell’ambiente digitale.

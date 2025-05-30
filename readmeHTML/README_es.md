@@ -10,7 +10,7 @@ Crear un sitio web dinámico utilizando Symfony (PHP) y VueJS para replicar un p
 - Una estructura base limpia y relacional ✅
 
 ### 🎯 Objetivo Secundario
-- Gestionar fechas mostradas en el idioma mantenido ✅
+- Gestionar fechas mostradas en el idioma seleccionado ✅
 - Subida de avatar ✅
 - Permitir a los usuarios cambiar el idioma según su preferencia ✅
 - Añadir seguridad para que solo el administrador pueda acceder a las operaciones CRUD ✅
@@ -242,3 +242,40 @@ php bin/console make:crud Comment
 ```
 
 ---
+
+## 🏗️ Configuración del proyecto VueJS
+
+- Esta dependencia es necesaria para asegurar la compatibilidad entre los módulos PHP y JavaScript de este proyecto.
+  ```bash
+  composer require symfony/webpack-encore-bundle
+  ```
+
+- Instalación de las dependencias necesarias.
+  ```bash
+  npm install vue-router@4 pinia axios react react-dom prop-types vue-loader@^17.0.0
+  ```
+
+---
+
+## 🌱 Eco-diseño del proyecto
+
+### Auditoría RGAA (Referencial General de Mejora de la Accesibilidad)
+Se realizó una auditoría para verificar la conformidad del proyecto con el RGAA:
+- **Estructura semántica**: Uso adecuado de etiquetas HTML (`header`, `nav`, `main`, `footer`, etc.) para garantizar una navegación accesible.
+- **Contrastes**: Los colores utilizados respetan las proporciones de contraste recomendadas para asegurar la legibilidad de los contenidos.
+- **Navegación por teclado**: Todas las funcionalidades principales son accesibles mediante teclado.
+- **Alternativas textuales**: Las imágenes cuentan con atributos `alt` pertinentes.
+- **Formularios**: Los campos de formulario están correctamente etiquetados y son accesibles.
+
+### Auditoría RGESN (Referencial General de Eco-diseño de Servicios Digitales)
+La auditoría RGESN permitió identificar y aplicar varias buenas prácticas:
+- **Carga diferida (Lazy loading)**: Implementación de carga diferida de imágenes para reducir el impacto ambiental al cargar las páginas.
+- **Minimización de dependencias**: Solo se instalan las librerías necesarias tanto en frontend como en backend.
+- **Gestión de caché**: Uso de caché del navegador para limitar solicitudes innecesarias al servidor.
+- **API optimizada**: Los endpoints expuestos por Symfony solo devuelven los datos necesarios para la visualización, limitando así el volumen de datos intercambiados.
+
+### Acciones de eco-diseño implementadas
+- **Eliminación de recursos no utilizados**: Limpieza regular del código y eliminación de dependencias no utilizadas.
+- **Documentación**: Concienciación sobre el eco-diseño en la documentación del proyecto para fomentar futuras contribuciones responsables.
+
+Estas acciones contribuyen a que el proyecto sea más accesible, eficiente y respetuoso con el entorno digital.
