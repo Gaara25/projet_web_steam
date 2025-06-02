@@ -1,8 +1,8 @@
 <template>
   <div class="user-profile-card">
-    <img :src="avatarUrl" :alt="`Avatar of ${username}`" class="user-avatar" />
-    <h1>{{ username }}</h1>
-    <p>Email: {{ email }}</p>
+    <img :src="avatarUrl" :alt="`Avatar of ${user.username}`" class="user-avatar" />
+    <h1>{{ user.username }}</h1>
+    <p>Email: {{ user.email }}</p>
   </div>
 </template>
 
@@ -16,7 +16,10 @@ export default {
   },
   computed: {
     avatarUrl() {
-      return require(`@/assets/uploads/avatars/${this.user.avatar}`);
+      if (this.user && this.user.avatar) {
+        return `/uploads/avatars/${this.user.avatar}`;
+      }
+      return '/path/to/default-avatar.png';
     },
     username() {
       return this.user.username;
@@ -29,4 +32,10 @@ export default {
 </script>
 
 <style scoped>
+.user-avatar {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
 </style>

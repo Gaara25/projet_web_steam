@@ -18,9 +18,9 @@ Créer un site web dynamique avec Symfony (PHP) et VueJS reproduisant le profil 
 - Ajouter une sécurité pour que seul l'admin puisse voir les CRUD ✅
 
 ### VueJS 
-- Utilisation de plusieurs composants ❌
-- Utilisation du routeur ❌
-- Utilisation de pinia ❌
+- Utilisation de plusieurs composants ✅
+- Utilisation du routeur ✅
+- Utilisation de pinia ✅
 - Une partie du site utilisera l’API de Symfony pour afficher de manière dynamique des données. ❌
 
 ---

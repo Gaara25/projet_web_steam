@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{{ 'project_title'|trans }}{% endblock %}</title>
+        <link rel="manifest" href="public/favicon/site.webmanifest">
+
+        {% block stylesheets %}
+                {{ encore_entry_link_tags('app') }}
+            <link href="{{ asset('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css') }}">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism.min.css">
+            <link rel="stylesheet" href={{ asset('css/style.css') }} >
+            <link rel="stylesheet" href={{ asset('css/steam.css') }} >
+        {% endblock %}
+        {% block javascripts %}
+                {{ encore_entry_script_tags('app') }}
+            <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js') }}" defer></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js"></script>
+            <script type="text/javascript" src="{{ asset('js/main.js') }}" defer></script>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="vue-app">loading ...</div>
+        {{ encore_entry_script_tags('app') }}
+    </body>
+</html>

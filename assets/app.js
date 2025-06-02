@@ -11,6 +11,6 @@ const app = createApp(App)
 
 app.use(router)
 app.use(createPinia())
-app.use(i18n)
+app.use(store)
 
-app.mount('#app')
+app.mount('#vue-app')

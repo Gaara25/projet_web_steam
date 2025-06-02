@@ -18,9 +18,9 @@ Créer un site web dynamique avec Symfony (PHP) et VueJS reproduisant le profil 
 - Ajouter une sécurité pour que seul l'admin puisse voir les CRUD ✅
 
 ### VueJS 
-- Utilisation de plusieurs composants ❌
-- Utilisation du routeur ❌
-- Utilisation de pinia ❌
+- Utilisation de plusieurs composants ✅
+- Utilisation du routeur ✅
+- Utilisation de pinia ✅
 - Une partie du site utilisera l’API de Symfony pour afficher de manière dynamique des données. ❌
 
 ---
@@ -277,7 +277,6 @@ Un audit a été mené pour vérifier la conformité du projet avec le RGAA :
 
 ### Audit RGESN (Référentiel Général d’Écoconception des Services Numériques)
 L’audit RGESN a permis d’identifier et d’appliquer plusieurs bonnes pratiques :
-- **Lazy loading** : Mise en place du chargement différé des images pour réduire l’impact environnemental lors du chargement des pages.
 - **Minimisation des dépendances** : Seules les librairies nécessaires sont installées côté frontend et backend.
 - **Gestion du cache** : Utilisation du cache navigateur pour limiter les requêtes serveur inutiles.
 - **API optimisée** : Les endpoints exposés par Symfony ne retournent que les données nécessaires à l’affichage, limitant ainsi le volume de données échangées.
